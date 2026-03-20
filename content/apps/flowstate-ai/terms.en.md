@@ -22,6 +22,7 @@ By accessing or using FlowState AI, you agree to be bound by these Terms. If you
 ## 2. Description of service
 
 FlowState AI is a productivity application that provides:
+
 - Pomodoro-based focus timer
 - AI-powered focus detection using on-device facial recognition
 - Session statistics and focus reports
@@ -41,17 +42,21 @@ FlowState AI is a productivity application that provides:
 ## 4. Subscriptions and payments
 
 ### 4.1 Free tier
+
 Basic timer, focus tracking, and standard themes are available for free with ads.
 
 ### 4.2 Pro subscription
+
 - Monthly: $1.49/month
 - Annual: $11.99/year
 - Student discount: 20% off with valid school email
 
 ### 4.3 Payment processing
+
 All payments are processed through Apple App Store or Google Play Store. We do not directly handle payment information.
 
 ### 4.4 Cancellation and refunds
+
 - You may cancel your subscription at any time through your App Store or Play Store account settings.
 - Refunds are subject to the respective store's refund policies.
 
@@ -60,6 +65,7 @@ All payments are processed through Apple App Store or Google Play Store. We do n
 ## 5. User conduct
 
 You agree not to:
+
 - Use the App for any unlawful purpose.
 - Attempt to reverse-engineer, decompile, or disassemble the App.
 - Interfere with the App's infrastructure or other users' access.

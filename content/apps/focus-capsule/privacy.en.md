@@ -28,13 +28,10 @@ The app collects data through two primary channels:
 
 ### 2.1 Advertising and Usage Profiles
 
-**Cookies (Website Only)**
-
-The website uses cookies — small text files stored on your computer — to enhance functionality. Most modern browsers allow cookie management or complete disabling, though this may impair website performance. Cookies don't contain personal identification data.
-
-**Google Analytics (Website Only)**
-
-This website uses Google Analytics to analyze user behavior. The service employs cookies and implements IP anonymization ("setAnonymizeIp") to shorten addresses within the EU before transmission to US servers. Your full IP is only sent to US servers in exceptional cases and is shortened there.
+* **Cookies (Website Only)**
+  * The website uses cookies — small text files stored on your computer — to enhance functionality. Most modern browsers allow cookie management or complete disabling, though this may impair website performance. Cookies don't contain personal identification data.
+* **Google Analytics (Website Only)**
+  * This website uses Google Analytics to analyze user behavior. The service employs cookies and implements IP anonymization ("setAnonymizeIp") to shorten addresses within the EU before transmission to US servers. Your full IP is only sent to US servers in exceptional cases and is shortened there.
 
 You can opt out via browser settings or [Google's opt-out tool](http://tools.google.com/dlpage/gaoptout?hl=en).
 

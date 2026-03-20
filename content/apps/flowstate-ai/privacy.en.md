@@ -16,21 +16,26 @@ CodeCompose ("we", "us", or "our") operates the FlowState AI mobile application.
 ## 1. Information we collect
 
 ### 1.1 Account information
+
 If you create an account, we collect your email address and display name through Firebase Authentication. This information is used solely for authentication and syncing your data across devices.
 
 ### 1.2 Usage data
+
 We collect anonymous usage statistics through Firebase Analytics to improve the app experience. This includes app version, device type, and feature usage patterns. No personally identifiable information is included.
 
 ### 1.3 Camera and facial data
+
 FlowState AI uses your device's front-facing camera to detect facial presence and estimate focus levels.
 
-**Important**: 
+**Important**:
+
 - **All facial analysis is performed entirely on your device** using Google ML Kit Face Detection.
 - **No images, video frames, or facial data are ever uploaded to any server.**
 - **No facial data is stored on your device.** Camera frames are analyzed in real time and immediately discarded.
 - We do not use facial recognition (identifying who you are). We only detect facial presence and orientation.
 
 ### 1.4 Subscription data
+
 Subscription purchases are processed through Apple App Store and Google Play Store. We use RevenueCat to manage subscription status. We do not have access to your payment details.
 
 ---
@@ -81,6 +86,7 @@ FlowState AI is not intended for children under 13. We do not knowingly collect 
 ## 7. Your rights
 
 You have the right to:
+
 - Access the personal data we hold about you.
 - Request correction of inaccurate data.
 - Request deletion of your data.
