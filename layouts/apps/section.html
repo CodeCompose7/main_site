@@ -77,6 +77,16 @@
         {{ end }}
       </div>
     </div>
+    {{ with $.Params.themes_landscape_image }}
+    <div class="themes-landscape">
+      <h3 class="themes-landscape-title">{{ $.Params.themes_landscape_title }}</h3>
+      <p class="themes-landscape-desc">{{ $.Params.themes_landscape_desc }}</p>
+      <div class="themes-landscape-phone">
+        <img class="themes-landscape-frame" src="/img/phone_bg.png" alt="">
+        <img class="themes-landscape-screen" src="{{ . }}" alt="{{ $.Params.themes_landscape_title }}">
+      </div>
+    </div>
+    {{ end }}
   </div>
 </section>
 <script>
@@ -107,7 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.theme-preview-item video').forEach(function(v) {
     v.addEventListener('ended', function() {
       var current = Number(v.closest('.theme-preview-item').dataset.theme);
-      switchTheme((current + 1) % totalThemes);
+      setTimeout(function() {
+        switchTheme((current + 1) % totalThemes);
+      }, 2000);
     });
   });
 });

@@ -617,6 +617,53 @@ img {
   word-break: keep-all;
 }
 
+.themes-landscape {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.themes-landscape-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.themes-landscape-desc {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-bottom: 48px;
+}
+
+.themes-landscape-phone {
+  position: relative;
+  width: 560px;
+  aspect-ratio: 1324 / 644;
+  margin: 0 auto;
+}
+
+.themes-landscape-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 560px;
+  width: auto;
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.12));
+}
+
+.themes-landscape-screen {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: cover;
+  border-radius: 22px;
+}
+
 /* — Pricing — */
 .pricing-grid {
   display: grid;
@@ -1148,6 +1195,14 @@ img {
 
   .theme-detail-item {
     text-align: center;
+  }
+
+  .themes-landscape-phone {
+    width: 100%;
+  }
+
+  .themes-landscape-frame {
+    height: 100vw;
   }
 
   /* Feature grid */
