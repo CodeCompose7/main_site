@@ -11,11 +11,6 @@
       <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/blog/" target="_blank">{{ if eq .Lang "ko" }}블로그{{ else }}Blog{{ end }}</a>
     </div>
     <div class="footer-col">
-      <h4>{{ if eq .Lang "ko" }}법적 고지{{ else }}Legal{{ end }}</h4>
-      <a href="/{{ .Lang }}/apps/flowstate-ai/privacy/">{{ if eq .Lang "ko" }}개인정보 처리방침{{ else }}Privacy Policy{{ end }}</a>
-      <a href="/{{ .Lang }}/apps/flowstate-ai/terms/">{{ if eq .Lang "ko" }}이용약관{{ else }}Terms of Service{{ end }}</a>
-    </div>
-    <div class="footer-col">
       <h4>{{ if eq .Lang "ko" }}연락처{{ else }}Contact{{ end }}</h4>
       <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
       <a href="{{ .Site.Params.github }}" target="_blank">GitHub</a>
@@ -33,5 +28,11 @@
       {{ end }}
     </div>
     <div>&copy; {{ now.Year }} CodeCompose</div>
+  </div>
+  <div class="footer-logo">
+    <a href="/{{ .Lang }}/">
+      <img src="/img/logo.png" alt="CodeCompose">
+      <span>CodeCompose</span>
+    </a>
   </div>
 </footer>

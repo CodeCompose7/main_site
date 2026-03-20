@@ -50,7 +50,7 @@
       <div class="feature-card">
         <div class="feature-card-icon">{{ .icon }}</div>
         <h3>{{ .title }}</h3>
-        <p>{{ .description }}</p>
+        <p>{{ .description | safeHTML }}</p>
       </div>
       {{ end }}
     </div>
