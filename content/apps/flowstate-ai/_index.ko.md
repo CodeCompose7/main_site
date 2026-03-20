@@ -44,8 +44,10 @@ highlights_title: "더 많은 기능"
 pricing_title: "심플한 가격"
 pricing_subtitle: "무료로 시작하세요. 준비되면 업그레이드."
 pricing_badge: "추천"
-pricing_note: "한 플랫폼에서 구매하면 다른 플랫폼에서도 사용 가능합니다."
-pricing_note2: "iOS와 Android의 구매 가격은 다를 수 있습니다."
+pricing_notes:
+  - "한 플랫폼에서 구매하면 다른 플랫폼에서도 사용 가능합니다."
+  - "(예: iOS 구매 → Android 사용 가능)"
+  - "국가에 따라 iOS와 Android의 구매 가격은 다를 수 있습니다."
 pricing:
   - name: "무료"
     price: "₩0"

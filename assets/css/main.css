@@ -494,8 +494,8 @@ img {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-  max-width: 960px;
+  gap: 16px;
+  max-width: 1080px;
   margin: 40px auto 0;
 }
 
@@ -552,9 +552,10 @@ img {
 
 .pricing-features {
   list-style: none;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-text-secondary);
   line-height: 2;
+  word-break: keep-all;
 }
 
 .pricing-features li::before {

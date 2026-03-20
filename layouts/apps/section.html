@@ -66,8 +66,10 @@
     <p style="font-size:17px;color:var(--color-text-secondary);">
       {{ $.Params.pricing_subtitle }}
     </p>
-    {{ with $.Params.pricing_note }}
-    <p style="font-size:14px;color:var(--color-text-tertiary);margin-top:8px;">{{ . }}{{ with $.Params.pricing_note2 }}<br>{{ . }}{{ end }}</p>
+    {{ with $.Params.pricing_notes }}
+    <p style="font-size:14px;color:var(--color-text-tertiary);margin-top:8px;">
+      {{ range $i, $note := . }}{{ if $i }}<br>{{ end }}{{ $note }}{{ end }}
+    </p>
     {{ end }}
     <div class="pricing-grid">
       {{ range . }}
