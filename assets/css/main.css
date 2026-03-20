@@ -638,6 +638,7 @@ img {
 .themes-landscape-phone {
   position: relative;
   width: 560px;
+  max-width: 100%;
   aspect-ratio: 1324 / 644;
   margin: 0 auto;
 }
@@ -646,8 +647,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 560px;
-  width: auto;
+  width: 48.64%;
+  height: 205.6%;
   z-index: 2;
   pointer-events: none;
   transform: translate(-50%, -50%) rotate(-90deg);
@@ -656,10 +657,10 @@ img {
 
 .themes-landscape-screen {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
+  top: 2.5%;
+  left: 2%;
+  width: 96%;
+  height: 95%;
   object-fit: cover;
   border-radius: 22px;
 }
@@ -1197,12 +1198,20 @@ img {
     text-align: center;
   }
 
+  .themes-landscape {
+    margin-top: 48px;
+  }
+
   .themes-landscape-phone {
     width: 100%;
   }
 
-  .themes-landscape-frame {
-    height: 100vw;
+  .themes-landscape-screen {
+    border-radius: 12px;
+  }
+
+  .themes-landscape-title {
+    font-size: 20px;
   }
 
   /* Feature grid */
