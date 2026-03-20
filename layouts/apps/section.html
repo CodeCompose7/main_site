@@ -36,6 +36,85 @@
 </section>
 {{ end }}
 
+<!-- Themes showcase -->
+{{ with .Params.themes }}
+<section class="section-full section-alt">
+  <div class="section section-center">
+    <h2 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px;">
+      {{ $.Params.themes_title }}
+    </h2>
+    <p style="font-size:17px;color:var(--color-text-secondary);margin-bottom:48px;">
+      {{ $.Params.themes_subtitle }}
+    </p>
+    <div class="themes-showcase">
+      <div class="themes-preview">
+        <img class="themes-phone-frame" src="/img/phone_bg.png" alt="">
+        {{ range $i, $theme := . }}
+        <div class="theme-preview-item{{ if eq $i 0 }} active{{ end }}" data-theme="{{ $i }}">
+          <video autoplay muted playsinline poster="{{ .poster }}">
+            <source src="{{ .video }}" type="video/mp4">
+          </video>
+        </div>
+        {{ end }}
+      </div>
+      <div class="themes-right">
+        <div class="themes-tabs">
+          {{ range $i, $theme := . }}
+          <button class="theme-tab{{ if eq $i 0 }} active{{ end }}" data-theme="{{ $i }}">
+            <span class="theme-tab-icon"><i class="ti {{ .icon }}"></i></span>
+            <span class="theme-tab-text">
+              <span class="theme-tab-name">{{ .name }}</span>
+              <span class="theme-tab-desc">{{ .tab_desc }}</span>
+            </span>
+          </button>
+          {{ end }}
+        </div>
+        <div class="themes-detail">
+          {{ range $i, $theme := . }}
+          <div class="theme-detail-item{{ if eq $i 0 }} active{{ end }}" data-theme="{{ $i }}">
+            {{ .description | safeHTML }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var totalThemes = document.querySelectorAll('.theme-tab').length;
+
+  function switchTheme(idx) {
+    var s = String(idx);
+    document.querySelectorAll('.theme-tab, .theme-preview-item, .theme-detail-item').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.theme === s);
+    });
+    document.querySelectorAll('.theme-preview-item video').forEach(function(v) {
+      if (v.closest('.theme-preview-item').dataset.theme === s) {
+        v.currentTime = 0;
+        v.play();
+      } else {
+        v.pause();
+      }
+    });
+  }
+
+  document.querySelectorAll('.theme-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      switchTheme(Number(this.dataset.theme));
+    });
+  });
+
+  document.querySelectorAll('.theme-preview-item video').forEach(function(v) {
+    v.addEventListener('ended', function() {
+      var current = Number(v.closest('.theme-preview-item').dataset.theme);
+      switchTheme((current + 1) % totalThemes);
+    });
+  });
+});
+</script>
+{{ end }}
+
 <!-- Feature grid -->
 {{ with .Params.highlights }}
 <section class="section-full section-alt">
