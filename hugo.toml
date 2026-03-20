@@ -1,0 +1,31 @@
+baseURL = "https://codecompose.net/"
+languageCode = "en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+title = "CodeCompose"
+enableRobotsTXT = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "CodeCompose"
+    [languages.en.params]
+      description = "Apps for productivity and focus, powered by AI."
+
+  [languages.ko]
+    languageName = "한국어"
+    weight = 2
+    title = "코드컴포즈"
+    [languages.ko.params]
+      description = "AI 기반 생산성 앱을 만듭니다."
+
+[params]
+  email = "dev@codecompose.net"
+  github = "https://github.com/CodeCompose7"
+  coursesUrl = "https://courses.codecompose.net"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,21 @@
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/{{ .Lang }}/">
+      <img src="/img/logo.png" alt="CodeCompose">
+      <span>CodeCompose</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/{{ .Lang }}/apps/flowstate-ai/">FlowState AI</a></li>
+      <li><a href="/{{ .Lang }}/apps/focus-capsule/">Focus Capsule</a></li>
+      <li><a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ if eq .Lang "ko" }}강의{{ else }}Courses{{ end }}</a></li>
+      <li><a href="/{{ .Lang }}/about/">{{ if eq .Lang "ko" }}소개{{ else }}About{{ end }}</a></li>
+      <li>
+        {{ if eq .Lang "ko" }}
+          <a class="lang-switch" href="/en/">EN</a>
+        {{ else }}
+          <a class="lang-switch" href="/ko/">한국어</a>
+        {{ end }}
+      </li>
+    </ul>
+  </div>
+</nav>

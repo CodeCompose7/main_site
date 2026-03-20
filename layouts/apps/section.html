@@ -1,0 +1,111 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero">
+  {{ with .Params.icon }}
+    <img class="hero-icon" src="{{ . }}" alt="{{ $.Title }}">
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <p class="subtitle">{{ .Params.subtitle }}</p>
+  {{ with .Params.stores }}
+  <div class="btn-group">
+    {{ with .appstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">App Store</a>{{ end }}
+    {{ with .playstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">Google Play</a>{{ end }}
+  </div>
+  {{ end }}
+  {{ with .Params.tagline }}
+    <p class="tagline">{{ . }}</p>
+  {{ end }}
+</section>
+
+<!-- Features — alternating full-bleed -->
+{{ range $i, $feat := .Params.features }}
+<section class="section-full{{ if (modBool $i 2) }} section-alt{{ end }}">
+  <div class="feature-row{{ if not (modBool $i 2) }} reverse{{ end }}">
+    <div class="feature-text">
+      {{ with .label }}<div class="feature-label">{{ . }}</div>{{ end }}
+      <h2>{{ .title }}</h2>
+      <p>{{ .description }}</p>
+    </div>
+    <div class="feature-visual">
+      <div class="feature-visual-placeholder">{{ if eq $.Lang "ko" }}스크린샷{{ else }}Screenshot{{ end }}</div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Feature grid -->
+{{ with .Params.highlights }}
+<section class="section-full section-alt">
+  <div class="section section-center">
+    <h2 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;margin-bottom:48px;">
+      {{ if eq $.Lang "ko" }}더 많은 기능{{ else }}And much more{{ end }}
+    </h2>
+    <div class="features-grid">
+      {{ range . }}
+      <div class="feature-card">
+        <div class="feature-card-icon">{{ .icon }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Pricing -->
+{{ with .Params.pricing }}
+<section class="section-full">
+  <div class="section section-center">
+    <h2 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px;">
+      {{ if eq $.Lang "ko" }}심플한 가격{{ else }}Simple pricing{{ end }}
+    </h2>
+    <p style="font-size:17px;color:var(--color-text-secondary);">
+      {{ if eq $.Lang "ko" }}무료로 시작하세요. 준비되면 업그레이드.{{ else }}Start free. Upgrade when you're ready.{{ end }}
+    </p>
+    <div class="pricing-grid">
+      {{ range . }}
+      <div class="pricing-card{{ if .featured }} featured{{ end }}">
+        {{ if .featured }}<div class="pricing-badge">{{ if eq $.Lang "ko" }}추천{{ else }}Recommended{{ end }}</div>{{ end }}
+        <h3>{{ .name }}</h3>
+        <div class="pricing-price">{{ .price }} {{ with .period }}<span>{{ . }}</span>{{ end }}</div>
+        {{ with .sub }}<div class="pricing-sub">{{ . }}</div>{{ end }}
+        <ul class="pricing-features">
+          {{ range .items }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- CTA -->
+<section class="cta-section section-alt">
+  <h2>{{ .Params.cta_title }}</h2>
+  <p>{{ .Params.cta_description }}</p>
+  {{ with .Params.stores }}
+  <div class="btn-group">
+    {{ with .appstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">App Store</a>{{ end }}
+    {{ with .playstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">Google Play</a>{{ end }}
+  </div>
+  {{ end }}
+</section>
+
+<!-- Legal links -->
+<section class="section" style="padding:48px 24px;text-align:center;">
+  {{ if eq .Lang "ko" }}
+    <a href="privacy/" style="margin-right:24px;">개인정보 처리방침</a>
+    <a href="terms/" style="margin-right:24px;">이용약관</a>
+    <a href="mailto:{{ .Site.Params.email }}">지원</a>
+  {{ else }}
+    <a href="privacy/" style="margin-right:24px;">Privacy Policy</a>
+    <a href="terms/" style="margin-right:24px;">Terms of Service</a>
+    <a href="mailto:{{ .Site.Params.email }}">Support</a>
+  {{ end }}
+</section>
+
+{{ end }}
