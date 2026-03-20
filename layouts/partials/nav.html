@@ -10,10 +10,8 @@
       <li><a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ if eq .Lang "ko" }}강의{{ else }}Courses{{ end }}</a></li>
       <li><a href="/{{ .Lang }}/about/">{{ if eq .Lang "ko" }}소개{{ else }}About{{ end }}</a></li>
       <li>
-        {{ if eq .Lang "ko" }}
-          <a class="lang-switch" href="/en/">EN</a>
-        {{ else }}
-          <a class="lang-switch" href="/ko/">한국어</a>
+        {{ range .Translations }}
+          <a class="lang-switch" href="{{ .RelPermalink }}">{{ if eq .Lang "ko" }}한국어{{ else }}EN{{ end }}</a>
         {{ end }}
       </li>
     </ul>
