@@ -3,7 +3,7 @@ title: "FlowState AI"
 type: "apps"
 layout: "section"
 subtitle: "Your focus, measured. Not guessed."
-icon: "/img/flowstate-icon.png"
+icon: "/img/flow_state/icon.png"
 tagline: "Free to use · Pro from $1.49/mo"
 stores:
   appstore: "#"
