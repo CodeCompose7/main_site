@@ -66,6 +66,9 @@
     <p style="font-size:17px;color:var(--color-text-secondary);">
       {{ $.Params.pricing_subtitle }}
     </p>
+    {{ with $.Params.pricing_note }}
+    <p style="font-size:14px;color:var(--color-text-tertiary);margin-top:8px;">{{ . }}{{ with $.Params.pricing_note2 }}<br>{{ . }}{{ end }}</p>
+    {{ end }}
     <div class="pricing-grid">
       {{ range . }}
       <div class="pricing-card{{ if .featured }} featured{{ end }}">
@@ -99,7 +102,8 @@
 
 <!-- Legal links -->
 <section class="section" style="padding:48px 24px;text-align:center;">
-  <a href="privacy/" style="margin-right:24px;">{{ .Params.legal_privacy }}</a>
+  {{ with .Params.legal_privacy }}<a href="privacy/" style="margin-right:24px;">{{ . }}</a>{{ end }}
+  {{ with .Params.legal_terms }}<a href="terms/" style="margin-right:24px;">{{ . }}</a>{{ end }}
   <a href="mailto:{{ .Site.Params.email }}">{{ .Params.legal_support }}</a>
 </section>
 

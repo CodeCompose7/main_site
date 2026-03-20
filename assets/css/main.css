@@ -3,12 +3,47 @@
    Things-inspired: generous whitespace, bold type, full-bleed
    ============================================================ */
 
-@font-face { font-family: 'AstaSans'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Light.woff2') format('woff2'); font-weight: 300; font-display: swap; }
-@font-face { font-family: 'AstaSans'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
-@font-face { font-family: 'AstaSans'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
-@font-face { font-family: 'AstaSans'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
-@font-face { font-family: 'AstaSans'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Bold.woff2') format('woff2'); font-weight: 700; font-display: swap; }
-@font-face { font-family: 'AstaSans'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-ExtraBold.woff2') format('woff2'); font-weight: 800; font-display: swap; }
+@font-face {
+  font-family: 'AstaSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AstaSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AstaSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AstaSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AstaSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AstaSans';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2505-1@1.0/AstaSans-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-display: swap;
+}
 
 :root {
   --color-bg: #ffffff;
@@ -436,6 +471,7 @@ img {
   justify-content: center;
   margin: 0 auto 16px;
 }
+
 .feature-card-icon img {
   width: 40px;
   height: 40px;
@@ -457,14 +493,14 @@ img {
 /* — Pricing — */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
-  max-width: 880px;
+  max-width: 960px;
   margin: 40px auto 0;
 }
 
 .pricing-card {
-  padding: 36px 32px;
+  padding: 30px 20px;
   border-radius: 20px;
   border: 0.5px solid var(--color-border);
   background: var(--color-bg);
@@ -926,7 +962,10 @@ img {
   }
 
   /* Hero */
-  .services-hero-icon-single { font-size: 64px; }
+  .services-hero-icon-single {
+    font-size: 64px;
+  }
+
   .hero {
     padding: 120px 24px 64px;
     min-height: auto;
