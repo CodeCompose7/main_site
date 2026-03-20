@@ -435,9 +435,10 @@ img {
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
-  font-size: 42px;
-  line-height: 1;
-  color: var(--color-text);
+}
+.feature-card-icon img {
+  width: 40px;
+  height: 40px;
 }
 
 .feature-card h3 {

@@ -48,7 +48,7 @@
     <div class="features-grid">
       {{ range . }}
       <div class="feature-card">
-        <div class="feature-card-icon"><i class="{{ .icon }}"></i></div>
+        <div class="feature-card-icon"><img src="{{ .icon }}" alt="{{ .title }}"></div>
         <h3>{{ .title }}</h3>
         <p>{{ .description | safeHTML }}</p>
       </div>
