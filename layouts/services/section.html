@@ -2,12 +2,7 @@
 
 <!-- Hero -->
 <section class="hero">
-  <div class="services-hero-icons">
-    {{ range .Params.services }}
-    <div class="services-hero-icon-item"><i class="{{ .icon }}"></i></div>
-
-    {{ end }}
-  </div>
+  <div class="services-hero-icon-single"><i class="ti ti-code"></i></div>
   <h1>{{ .Params.subtitle }}</h1>
   <p class="subtitle">{{ .Params.description | safeHTML }}</p>
 </section>
@@ -22,7 +17,7 @@
     <div class="services-grid">
       {{ range . }}
       <div class="service-card">
-        <div class="service-icon"><i class="{{ .icon }}"></i></div>
+        <div class="service-icon"><img src="{{ .icon }}" alt="{{ .title }}"></div>
         <h3>{{ .title }}</h3>
         <p>{{ .description | safeHTML }}</p>
       </div>
