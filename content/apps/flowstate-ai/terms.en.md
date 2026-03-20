@@ -24,7 +24,7 @@ By accessing or using FlowState AI, you agree to be bound by these Terms. If you
 FlowState AI is a productivity application that provides:
 
 - Pomodoro-based focus timer
-- AI-powered focus detection using on-device facial recognition
+- AI-powered focus detection using on-device facial detection
 - Session statistics and focus reports
 - Plan management and tracking
 
@@ -43,13 +43,11 @@ FlowState AI is a productivity application that provides:
 
 ### 4.1 Free tier
 
-Basic timer, focus tracking, and standard themes are available for free with ads.
+Basic timer, limited event and group creation, and standard themes are available for free.
 
 ### 4.2 Pro subscription
 
-- Monthly: $1.49/month
-- Annual: $11.99/year
-- Student discount: 20% off with valid school email
+Unlock all features including unlimited events, Pomodoro time settings, additional groups, all themes, and AI focus tracking. Monthly, annual, and lifetime purchase options are available. Pricing can be found in the app or on the respective store.
 
 ### 4.3 Payment processing
 
