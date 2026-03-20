@@ -1,6 +1,6 @@
 ---
 title: "코드컴포즈"
-subtitle: "집중과 생산성을 위한 앱을 만듭니다."
+subtitle: "AI로 만드는 집중과 생산성을 위한 앱."
 apps_title: "우리 앱"
 apps:
   - name: "FlowState AI"
