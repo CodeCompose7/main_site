@@ -126,10 +126,10 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 160px 24px 120px;
 }
 .hero-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 28px;
-  margin-bottom: 32px;
+  height: 200px;
+  width: auto;
+  margin-bottom: 40px;
+  filter: drop-shadow(0 12px 40px rgba(0,0,0,0.12));
 }
 .hero h1 {
   font-size: 56px;
@@ -139,15 +139,15 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 16px;
 }
 .hero .subtitle {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   color: var(--color-text-secondary);
   max-width: 600px;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 40px;
 }
 .hero .tagline {
-  font-size: 17px;
+  font-size: 15px;
   color: var(--color-text-tertiary);
   margin-top: 16px;
 }
