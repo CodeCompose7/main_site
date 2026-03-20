@@ -579,7 +579,7 @@ img {
   width: calc(100% - 20px);
   height: auto;
   border-radius: 22px;
-  margin: 10px 10px 0;
+  margin: 8px 10px 0;
 }
 
 .themes-right {
@@ -668,7 +668,7 @@ img {
 /* — Pricing — */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   max-width: 1080px;
   margin: 40px auto 0;
@@ -1060,6 +1060,12 @@ img {
 }
 
 /* — Responsive — */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --section-padding: 30px 0;
@@ -1207,7 +1213,7 @@ img {
   }
 
   .themes-landscape-screen {
-    border-radius: 12px;
+    border-radius: 7%;
   }
 
   .themes-landscape-title {
@@ -1237,11 +1243,6 @@ img {
   }
 
   /* Pricing */
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-  }
-
   /* App cards */
   .app-card {
     flex-direction: column;
@@ -1296,13 +1297,20 @@ img {
   }
 }
 
+@media (max-width: 620px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+}
+
 @media (max-width: 480px) {
   .nav-links {
     gap: 8px;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
   }
 
   .hero h1 {
