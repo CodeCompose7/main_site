@@ -17,13 +17,25 @@ showTableOfContents: true
 
 ### 1.1 계정 정보
 
-계정을 생성하는 경우 Firebase Authentication을 통해 이메일 주소와 표시 이름을 수집합니다. 이 정보는 인증과 기기 간 데이터 동기화 목적으로만 사용됩니다.
+계정을 생성하는 경우 Firebase Authentication을 통해 다음 정보를 수집합니다:
+
+- **Google 로그인**: 이메일 주소, 표시 이름, 프로필 사진 URL
+- **Apple 로그인**: 이메일 주소, 표시 이름
+
+이 정보는 인증과 기기 간 데이터 동기화 목적으로만 사용됩니다.
 
 ### 1.2 이용 데이터
 
-Firebase Analytics를 통해 앱 개선을 위한 익명 이용 통계를 수집합니다. 앱 버전, 기기 유형, 기능 사용 패턴 등이 포함되며, 개인 식별 정보는 포함되지 않습니다.
+Firebase Analytics를 통해 앱 개선을 위한 이용 통계를 수집합니다. 앱 버전, 기기 유형, 기능 사용 패턴 등이 포함됩니다.
 
-### 1.3 카메라 및 얼굴 데이터
+### 1.3 기기 및 세션 데이터
+
+앱 사용 시 다음 정보가 사용자 계정에 연결되어 Firebase Firestore에 저장됩니다:
+
+- **기기 정보**: 기기 모델명, OS 버전, 플랫폼, 앱 버전, Firebase Installation ID (계정당 최대 10대 기기 관리에 사용)
+- **세션 데이터**: 집중 점수, 세션 시간, 중단 횟수, 일별/주별 통계
+
+### 1.4 카메라 및 얼굴 데이터
 
 FlowState AI는 기기의 전면 카메라를 사용하여 얼굴 존재를 감지하고 집중도를 측정합니다.
 
@@ -34,7 +46,7 @@ FlowState AI는 기기의 전면 카메라를 사용하여 얼굴 존재를 감�
 - **기기에 얼굴 데이터가 저장되지 않습니다.** 카메라 프레임은 실시간으로 분석된 후 즉시 폐기됩니다.
 - 얼굴 인식(사용자가 누구인지 식별)을 사용하지 않습니다. 얼굴 존재 여부와 방향만 감지합니다.
 
-### 1.4 구독 데이터
+### 1.5 구독 데이터
 
 구독 결제는 Apple App Store와 Google Play Store를 통해 처리됩니다. 구독 상태 관리를 위해 RevenueCat을 사용하며, 결제 정보에 직접 접근하지 않습니다.
 
@@ -44,6 +56,8 @@ FlowState AI는 기기의 전면 카메라를 사용하여 얼굴 존재를 감�
 
 - **인증**: 로그인 및 기기 간 데이터 동기화
 - **분석**: 앱 이용 패턴 파악 및 제품 개선
+- **기기 관리**: 계정에 연결된 기기 식별 및 데이터 동기화
+- **오류 진단**: 앱 오류 및 비정상 종료 원인 분석 (Firebase Crashlytics)
 - **집중도 측정**: 실시간 집중 점수 및 리포트 제공 (모두 기기 내에서 처리)
 
 ---
@@ -60,18 +74,19 @@ FlowState AI는 기기의 전면 카메라를 사용하여 얼굴 존재를 감�
 
 다음 제3자 서비스를 이용합니다:
 
-| 서비스            | 목적                     | 개인정보 처리방침                                                                  |
-| ----------------- | ------------------------ | ---------------------------------------------------------------------------------- |
-| Firebase (Google) | 인증, 데이터베이스, 분석 | [firebase.google.com/support/privacy](https://firebase.google.com/support/privacy) |
-| Google ML Kit     | 기기 내 얼굴 감지        | [developers.google.com/ml-kit](https://developers.google.com/ml-kit/terms)         |
-| RevenueCat        | 구독 관리                | [revenuecat.com/privacy](https://www.revenuecat.com/privacy)                       |
-| Google AdMob      | 광고 (무료 버전)         | [policies.google.com/privacy](https://policies.google.com/privacy)                 |
+| 서비스                          | 목적                     | 개인정보 처리방침                                                                  |
+| ------------------------------- | ------------------------ | ---------------------------------------------------------------------------------- |
+| Firebase (Google)               | 인증, 데이터베이스, 분석 | [firebase.google.com/support/privacy](https://firebase.google.com/support/privacy) |
+| Firebase Crashlytics (Google)   | 오류 진단 및 안정성 분석 | [firebase.google.com/support/privacy](https://firebase.google.com/support/privacy) |
+| Firebase Remote Config (Google) | 원격 설정 및 기능 플래그 | [firebase.google.com/support/privacy](https://firebase.google.com/support/privacy) |
+| Google ML Kit                   | 기기 내 얼굴 감지        | [developers.google.com/ml-kit](https://developers.google.com/ml-kit/terms)         |
+| RevenueCat                      | 구독 관리                | [revenuecat.com/privacy](https://www.revenuecat.com/privacy)                       |
 
 ---
 
 ## 5. 아동 개인정보 보호
 
-FlowState AI는 만 14세 미만 아동을 대상으로 하지 않습니다. 만 14세 미만 아동의 개인정보를 고의로 수집하지 않습니다. 아동이 개인정보를 제공한 사실을 알게 되시면 연락해 주세요.
+FlowState AI는 만 14세 미만 아동을 대상으로 하지 않습니다. 만 14세 미만 아동의 개인정보를 고의로 수집하지 않습니다. 만 14세 미만 아동의 개인정보가 수집된 것을 확인한 경우, 해당 정보를 지체 없이 삭제합니다. 아동이 개인정보를 제공한 사실을 알게 되시면 연락해 주세요.
 
 ---
 
