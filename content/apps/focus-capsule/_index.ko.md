@@ -45,9 +45,6 @@ highlights:
   - icon: "/img/icons/language.svg"
     title: "16개 언어"
     description: "한국어, 영어, 일본어 등<br>다양한 언어 지원."
-  - icon: "/img/icons/lock.svg"
-    title: "프라이버시"
-    description: "추적 없음. 광고 없음.<br>데이터는 나만의 것."
 pricing:
   - name: "무료"
     price: "₩0"

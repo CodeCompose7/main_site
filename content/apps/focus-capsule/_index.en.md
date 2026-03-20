@@ -45,9 +45,6 @@ highlights:
   - icon: "/img/icons/language.svg"
     title: "16 languages"
     description: "Including English, Korean,<br>Japanese, and more."
-  - icon: "/img/icons/lock.svg"
-    title: "Private"
-    description: "No tracking. No ads.<br>Your data stays yours."
 pricing:
   - name: "Free"
     price: "$0"
