@@ -4,7 +4,8 @@ type: "apps"
 layout: "section"
 subtitle: "Focus on your work. Rest when it's time."
 icon: "/img/focus-capsule/focus_capsule-logo.png"
-tagline: "Free for 50 Pomodoros · One-time purchase"
+tagline: "50 Pomodoros free · Yearly subscription & one-time purchase"
+hero_bg: "focus-capsule"
 stores:
   appstore: "https://apps.apple.com/app/focus-capsule-pomodoro/id1663703904"
 features:

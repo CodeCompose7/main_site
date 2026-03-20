@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero{{ with .Params.hero_bg }} hero-bg-{{ . }}{{ end }}">
   {{ with .Params.icon }}
   <img class="hero-icon" src="{{ . }}" alt="{{ $.Title }}">
   {{ end }}
