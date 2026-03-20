@@ -8,6 +8,7 @@
     <div class="footer-col">
       <h4>{{ if eq .Lang "ko" }}리소스{{ else }}Resources{{ end }}</h4>
       <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ if eq .Lang "ko" }}강의{{ else }}Courses{{ end }}</a>
+      <a href="/{{ .Lang }}/services/">{{ if eq .Lang "ko" }}외주 개발{{ else }}Services{{ end }}</a>
       <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/blog/" target="_blank">{{ if eq .Lang "ko" }}블로그{{ else }}Blog{{ end }}</a>
     </div>
     <div class="footer-col">
@@ -31,7 +32,7 @@
   <div class="footer-logo">
     <a href="/{{ .Lang }}/">
       <img src="/img/logo.png" alt="CodeCompose">
-      <span>CodeCompose</span>
+      <span>{{ if eq .Lang "ko" }}코드컴포즈{{ else }}CodeCompose{{ end }}</span>
     </a>
   </div>
 </footer>
