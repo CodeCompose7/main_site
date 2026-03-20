@@ -8,13 +8,9 @@
     {{ if eq .Lang "ko" }}
     집중과 생산성을 위한 앱을 만듭니다.
     {{ else }}
-    Apps for productivity and focus, powered by AI.
+    Apps for productivity and focus,<br>powered by AI.
     {{ end }}
   </p>
-  <div class="btn-group">
-    <a class="btn btn-primary" href="/{{ .Lang }}/apps/flowstate-ai/">FlowState AI</a>
-    <a class="btn btn-secondary" href="/{{ .Lang }}/apps/focus-capsule/">Focus Capsule</a>
-  </div>
 </section>
 
 <!-- Apps -->
@@ -28,7 +24,7 @@
       <img class="app-card-icon" src="/img/flowstate-icon.png" alt="FlowState AI">
       <div>
         <h3>FlowState AI</h3>
-        <p>{{ if eq .Lang "ko" }}AI 기반 얼굴 인식으로 실시간 집중도를 측정하는 포모도로 타이머.{{ else }}AI-powered focus timer that measures your real concentration level using on-device facial recognition.{{ end }}</p>
+        <p>{{ if eq .Lang "ko" }}AI 기반 얼굴 인식으로 실시간 집중도를 측정하는 포모도로 타이머.{{ else }}AI-powered focus timer that measures<br>your real concentration level<br>using on-device facial recognition.{{ end }}</p>
         <div class="app-card-tags">
           <span class="app-card-tag">iOS</span>
           <span class="app-card-tag">Android</span>
@@ -43,7 +39,7 @@
         style="border-radius:18px;">
       <div>
         <h3>{{ if eq .Lang "ko" }}포커스 캡슐{{ else }}Focus Capsule{{ end }}</h3>
-        <p>{{ if eq .Lang "ko" }}Apple 생태계를 위한 심플 포모도로 타이머.<br>iPhone, iPad, Mac, Apple Watch 지원.{{ else }}Simple Pomodoro timer for the Apple ecosystem.<br>iPhone, iPad, Mac, and Apple Watch.{{ end }}</p>
+        <p>{{ if eq .Lang "ko" }}Apple 생태계를 위한 심플 포모도로 타이머.<br>iPhone, iPad, Mac, Apple Watch 지원.{{ else }}Simple Pomodoro timer<br>for the Apple ecosystem.<br>iPhone, iPad, Mac, and Apple Watch.{{ end }}</p>
         <div class="app-card-tags">
           <span class="app-card-tag">iOS</span>
           <span class="app-card-tag">macOS</span>
