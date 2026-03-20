@@ -721,9 +721,9 @@ img {
 .app-card-icon {
   width: 72px;
   height: 72px;
-  border-radius: 18px;
   flex-shrink: 0;
 }
+.app-card-icon-rounded { border-radius: 18px; }
 
 .app-card h3 {
   font-size: 22px;
