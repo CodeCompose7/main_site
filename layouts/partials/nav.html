@@ -2,10 +2,10 @@
   <div class="nav-inner">
     <a class="nav-logo" href="/{{ .Lang }}/">
       <img src="/img/logo.png" alt="CodeCompose">
-      <span>CodeCompose</span>
+      <span>{{ if eq .Lang "ko" }}코드컴포즈{{ else }}CodeCompose{{ end }}</span>
     </a>
     <button class="nav-hamburger" aria-label="Menu">
-      <i class="iconoir-menu"></i>
+      <i class="ti ti-menu-2"></i>
     </button>
     <ul class="nav-links">
       <li><a href="/{{ .Lang }}/apps/flowstate-ai/">FlowState AI</a></li>
@@ -15,9 +15,9 @@
       <li><a href="/{{ .Lang }}/about/">{{ if eq .Lang "ko" }}소개{{ else }}About{{ end }}</a></li>
       <li class="lang-dropdown">
         <button class="lang-current">
-          <i class="iconoir-language"></i>
+          <i class="ti ti-language"></i>
           {{ if eq .Lang "ko" }}한국어{{ else }}English{{ end }}
-          <i class="iconoir-nav-arrow-down lang-arrow"></i>
+          <i class="ti ti-chevron-down lang-arrow"></i>
         </button>
         <ul class="lang-menu">
           {{ range .AllTranslations }}
