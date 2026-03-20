@@ -530,6 +530,7 @@ img {
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
+  word-break: keep-all;
 }
 
 .cta-section p {
@@ -753,6 +754,85 @@ img {
   color: var(--color-text-secondary);
 }
 
+/* — Services — */
+.services-hero-icons {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.services-hero-icon-item {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--color-accent);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.service-card {
+  padding: 32px 24px;
+  border-radius: 16px;
+  background: var(--color-bg);
+  border: 0.5px solid var(--color-border);
+  text-align: center;
+}
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: var(--color-accent);
+}
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* — Process — */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.process-step {
+  text-align: center;
+  padding: 0 16px;
+}
+.process-step-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.process-step h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.process-step p {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
 /* — Responsive — */
 @media (max-width: 768px) {
   :root {
@@ -830,6 +910,10 @@ img {
   .app-card { flex-direction: column; text-align: center; gap: 16px; padding: 24px; }
   .app-card-icon { width: 64px; height: 64px; margin: 0 auto; }
   .app-card-tags { justify-content: center; }
+
+  /* Services */
+  .services-grid { grid-template-columns: 1fr; max-width: 320px; }
+  .process-steps { grid-template-columns: 1fr; gap: 40px; }
 
   /* Footer */
   .footer-inner { flex-direction: column; gap: 24px; max-width: 100%; }
