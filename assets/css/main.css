@@ -731,7 +731,8 @@ img {
 .app-card p {
   font-size: 15px;
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
+  word-break: keep-all;
   margin: 0;
 }
 
@@ -752,7 +753,7 @@ img {
 /* — Responsive — */
 @media (max-width: 768px) {
   :root {
-    --section-padding: 48px 0;
+    --section-padding: 0 0;
   }
 
   /* Nav - hamburger menu */
@@ -823,8 +824,9 @@ img {
   .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
 
   /* App cards */
-  .app-card { gap: 20px; padding: 24px; }
-  .app-card-icon { width: 56px; height: 56px; }
+  .app-card { flex-direction: column; text-align: center; gap: 16px; padding: 24px; }
+  .app-card-icon { width: 64px; height: 64px; margin: 0 auto; }
+  .app-card-tags { justify-content: center; }
 
   /* Footer */
   .footer-inner { flex-direction: column; gap: 24px; max-width: 100%; }
