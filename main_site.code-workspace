@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/public": true,
+      "**/.hugo_build.lock": true
+    },
+    "files.watcherExclude": {
+      "**/public": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "budparr.language-hugo-vscode",
+      "eliostruyf.vscode-hugo-themer"
+    ]
+  }
+}
