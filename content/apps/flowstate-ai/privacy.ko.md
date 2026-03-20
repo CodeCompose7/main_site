@@ -55,12 +55,12 @@ FlowState AI는 기기의 전면 카메라를 사용하여 얼굴 존재를 감�
 
 다음 제3자 서비스를 이용합니다:
 
-| 서비스 | 목적 | 개인정보 처리방침 |
-|--------|------|-------------------|
+| 서비스            | 목적                     | 개인정보 처리방침                                                                  |
+| ----------------- | ------------------------ | ---------------------------------------------------------------------------------- |
 | Firebase (Google) | 인증, 데이터베이스, 분석 | [firebase.google.com/support/privacy](https://firebase.google.com/support/privacy) |
-| Google ML Kit | 기기 내 얼굴 감지 | [developers.google.com/ml-kit](https://developers.google.com/ml-kit/terms) |
-| RevenueCat | 구독 관리 | [revenuecat.com/privacy](https://www.revenuecat.com/privacy) |
-| Google AdMob | 광고 (무료 버전) | [policies.google.com/privacy](https://policies.google.com/privacy) |
+| Google ML Kit     | 기기 내 얼굴 감지        | [developers.google.com/ml-kit](https://developers.google.com/ml-kit/terms)         |
+| RevenueCat        | 구독 관리                | [revenuecat.com/privacy](https://www.revenuecat.com/privacy)                       |
+| Google AdMob      | 광고 (무료 버전)         | [policies.google.com/privacy](https://policies.google.com/privacy)                 |
 
 ---
 

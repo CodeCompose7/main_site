@@ -32,6 +32,12 @@ features:
     title: "Mac 메뉴바에서 바로"
     description: "Mac에서는 메뉴바에서<br>포모도로를 선택하고,<br>시작·일시정지·재시작까지 한 번에.<br>다른 앱을 사용하면서도 타이머를 놓치지 마세요."
     image: "/img/focus-capsule/ko/menubar.png"
+highlights_title: "더 많은 기능"
+pricing_title: "심플한 가격"
+pricing_subtitle: "무료로 시작하세요. 준비되면 업그레이드."
+pricing_badge: "추천"
+legal_privacy: "개인정보 처리방침"
+legal_support: "지원"
 highlights:
   - icon: "/img/icons/palette.svg"
     title: "커스텀 테마"

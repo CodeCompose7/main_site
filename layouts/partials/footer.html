@@ -1,38 +1,31 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-col">
-      <h4>{{ if eq .Lang "ko" }}앱{{ else }}Apps{{ end }}</h4>
+      <h4>{{ .Site.Params.footer_apps }}</h4>
       <a href="/{{ .Lang }}/apps/flowstate-ai/">FlowState AI</a>
       <a href="/{{ .Lang }}/apps/focus-capsule/">Focus Capsule</a>
     </div>
     <div class="footer-col">
-      <h4>{{ if eq .Lang "ko" }}리소스{{ else }}Resources{{ end }}</h4>
-      <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ if eq .Lang "ko" }}강의{{ else }}Courses{{ end }}</a>
-      <a href="/{{ .Lang }}/services/">{{ if eq .Lang "ko" }}외주 개발{{ else }}Services{{ end }}</a>
-      <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/blog/" target="_blank">{{ if eq .Lang "ko" }}블로그{{ else }}Blog{{ end }}</a>
+      <h4>{{ .Site.Params.footer_resources }}</h4>
+      <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ .Site.Params.footer_courses }}</a>
+      <a href="/{{ .Lang }}/services/">{{ .Site.Params.footer_services }}</a>
+      <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/blog/" target="_blank">{{ .Site.Params.footer_blog }}</a>
     </div>
     <div class="footer-col">
-      <h4>{{ if eq .Lang "ko" }}연락처{{ else }}Contact{{ end }}</h4>
+      <h4>{{ .Site.Params.footer_contact }}</h4>
       <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
       <a href="{{ .Site.Params.github }}" target="_blank">GitHub</a>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-business">
-      {{ if eq .Lang "ko" }}
-        상호 코드컴포즈 · 대표자명 이태규 · 사업자등록번호 784-18-01999<br>
-        통신판매업 신고번호 2023-인천연수구-0106<br>
-        인천광역시 연수구 한나루로 133, 4층 433호(옥련동, 박프라자)
-      {{ else }}
-        CodeCompose · Taekyu Lee · Reg. 784-18-01999<br>
-        4F #433, 133 Hannaru-ro, Yeonsu-gu, Incheon, Republic of Korea
-      {{ end }}
+      {{ .Site.Params.footer_business | safeHTML }}
     </div>
   </div>
   <div class="footer-logo">
     <a href="/{{ .Lang }}/">
-      <img src="/img/logo.png" alt="CodeCompose">
-      <span>{{ if eq .Lang "ko" }}코드컴포즈{{ else }}CodeCompose{{ end }}</span>
+      <img src="/img/logo.png" alt="{{ .Site.Title }}">
+      <span>{{ .Site.Params.footer_company }}</span>
     </a>
   </div>
 </footer>

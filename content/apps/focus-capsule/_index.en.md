@@ -32,6 +32,12 @@ features:
     title: "Right from your Mac menu bar"
     description: "On Mac, select your Pomodoro,<br>start, pause, and restart —<br>all from the menu bar.<br>Stay on top of your timer<br>without leaving your current app."
     image: "/img/focus-capsule/en/menubar.png"
+highlights_title: "And much more"
+pricing_title: "Simple pricing"
+pricing_subtitle: "Start free. Upgrade when you're ready."
+pricing_badge: "Recommended"
+legal_privacy: "Privacy Policy"
+legal_support: "Support"
 highlights:
   - icon: "/img/icons/palette.svg"
     title: "Customizable themes"

@@ -55,12 +55,12 @@ Subscription purchases are processed through Apple App Store and Google Play Sto
 
 We use the following third-party services:
 
-| Service | Purpose | Privacy Policy |
-|---------|---------|----------------|
+| Service           | Purpose                             | Privacy Policy                                                                     |
+| ----------------- | ----------------------------------- | ---------------------------------------------------------------------------------- |
 | Firebase (Google) | Authentication, database, analytics | [firebase.google.com/support/privacy](https://firebase.google.com/support/privacy) |
-| Google ML Kit | On-device face detection | [developers.google.com/ml-kit](https://developers.google.com/ml-kit/terms) |
-| RevenueCat | Subscription management | [revenuecat.com/privacy](https://www.revenuecat.com/privacy) |
-| Google AdMob | Advertising (free tier) | [policies.google.com/privacy](https://policies.google.com/privacy) |
+| Google ML Kit     | On-device face detection            | [developers.google.com/ml-kit](https://developers.google.com/ml-kit/terms)         |
+| RevenueCat        | Subscription management             | [revenuecat.com/privacy](https://www.revenuecat.com/privacy)                       |
+| Google AdMob      | Advertising (free tier)             | [policies.google.com/privacy](https://policies.google.com/privacy)                 |
 
 ---
 
