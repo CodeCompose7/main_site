@@ -9,10 +9,21 @@
       <li><a href="/{{ .Lang }}/apps/focus-capsule/">Focus Capsule</a></li>
       <li><a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ if eq .Lang "ko" }}강의{{ else }}Courses{{ end }}</a></li>
       <li><a href="/{{ .Lang }}/about/">{{ if eq .Lang "ko" }}소개{{ else }}About{{ end }}</a></li>
-      <li>
-        {{ range .Translations }}
-          <a class="lang-switch" href="{{ .RelPermalink }}">{{ if eq .Lang "ko" }}한국어{{ else }}EN{{ end }}</a>
-        {{ end }}
+      <li class="lang-dropdown">
+        <button class="lang-current">
+          <i class="iconoir-language"></i>
+          {{ if eq .Lang "ko" }}한국어{{ else }}English{{ end }}
+          <i class="iconoir-nav-arrow-down lang-arrow"></i>
+        </button>
+        <ul class="lang-menu">
+          {{ range .AllTranslations }}
+          <li>
+            <a href="{{ .RelPermalink }}"{{ if eq .Lang $.Lang }} class="active"{{ end }}>
+              {{ if eq .Lang "ko" }}한국어{{ else }}English{{ end }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
       </li>
     </ul>
   </div>
