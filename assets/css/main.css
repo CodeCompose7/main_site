@@ -232,34 +232,33 @@ img { max-width: 100%; height: auto; display: block; }
 /* — Feature grid (like ClaudeBar) — */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 .feature-card {
-  padding: 32px;
+  padding: 28px 20px;
   border-radius: 16px;
   background: var(--color-bg);
   border: 0.5px solid var(--color-border);
+  text-align: center;
 }
 .feature-card-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  font-size: 20px;
+  margin: 0 auto 16px;
+  font-size: 40px;
+  line-height: 1;
 }
 .feature-card h3 {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .feature-card p {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--color-text-secondary);
   line-height: 1.5;
 }
@@ -267,9 +266,9 @@ img { max-width: 100%; height: auto; display: block; }
 /* — Pricing — */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  max-width: 640px;
+  max-width: 880px;
   margin: 40px auto 0;
 }
 .pricing-card {
@@ -441,7 +440,7 @@ img { max-width: 100%; height: auto; display: block; }
   .hero .subtitle { font-size: 18px; }
   .feature-row, .feature-row.reverse { flex-direction: column; gap: 40px; }
   .feature-text h2 { font-size: 28px; }
-  .features-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 8px; }

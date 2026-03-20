@@ -6,57 +6,55 @@ showReadingTime: false
 showTableOfContents: true
 ---
 
-**Effective date**: January 2023  
-**Last updated**: March 2026
-
-CodeCompose ("we", "us", or "our") operates the Focus Capsule mobile application. This page informs you of our policies regarding the collection, use, and disclosure of personal data.
+**Updated:** January 2, 2023
 
 ---
 
-## 1. Information we collect
+## 1. Responsible Office / Point of Contact
 
-### 1.1 Diagnostics
-We may collect anonymous diagnostic data to improve app stability and performance. This data is not linked to your identity.
-
-### 1.2 iCloud data
-Focus Capsule uses iCloud to sync your Pomodoro settings and session history across your Apple devices. This data is managed by Apple's iCloud service and subject to Apple's privacy policy.
+Taekyu Lee
+Incheon Yeonsu-gu 111, Yongdam-ro, South Korea
+Email: [dev@codecompose.net](mailto:dev@codecompose.net)
 
 ---
 
-## 2. Information we do NOT collect
+## 2. Type and Scope of Collected Data
 
-- We do not collect personal identification information.
-- We do not collect location data.
-- We do not collect contacts or photos.
-- We do not use tracking or advertising identifiers.
+The app collects data through two primary channels:
 
----
+**In-App Purchases:** Apple processes transactions, collecting anonymized user IDs, purchase status, country, date and time. See [Apple's privacy policy](https://www.apple.com/privacy/).
 
-## 3. Third-party services
+**Website Contact Forms:** User submissions are stored with timestamps, origin IP addresses, and browser information, accessible only to authorized personnel.
 
-Focus Capsule does not integrate with third-party analytics or advertising services.
+### 2.1 Advertising and Usage Profiles
 
----
+**Cookies (Website Only)**
 
-## 4. Data storage
+The website uses cookies — small text files stored on your computer — to enhance functionality. Most modern browsers allow cookie management or complete disabling, though this may impair website performance. Cookies don't contain personal identification data.
 
-All your data is stored locally on your device and in your personal iCloud account. We do not maintain any external servers for storing user data.
+**Google Analytics (Website Only)**
 
----
+This website uses Google Analytics to analyze user behavior. The service employs cookies and implements IP anonymization ("setAnonymizeIp") to shorten addresses within the EU before transmission to US servers. Your full IP is only sent to US servers in exceptional cases and is shortened there.
 
-## 5. Children's privacy
+You can opt out via browser settings or [Google's opt-out tool](http://tools.google.com/dlpage/gaoptout?hl=en).
 
-Focus Capsule does not knowingly collect personal information from children under 13.
+For more details: [Google Privacy Policy](https://www.google.com/policies/privacy/)
 
 ---
 
-## 6. Changes to this policy
+## 3. Data Protection
 
-We may update this privacy policy from time to time. Changes will be posted on this page.
+Technical and organizational security measures protect personal data from unauthorized access. These safeguards are regularly reviewed and updated.
 
 ---
 
-## 7. Contact us
+## 4. Deletion, Information, and Revocation
 
-- **Email**: [dev@codecompose.net](mailto:dev@codecompose.net)
-- **Business**: CodeCompose (코드컴포즈)
+Request data deletion by contacting:
+
+Taekyu Lee
+Email: [dev@codecompose.net](mailto:dev@codecompose.net)
+
+---
+
+**Version:** January 2023
