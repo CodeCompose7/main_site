@@ -4,6 +4,9 @@
       <img src="/img/logo.png" alt="CodeCompose">
       <span>CodeCompose</span>
     </a>
+    <button class="nav-hamburger" aria-label="Menu">
+      <i class="iconoir-menu"></i>
+    </button>
     <ul class="nav-links">
       <li><a href="/{{ .Lang }}/apps/flowstate-ai/">FlowState AI</a></li>
       <li><a href="/{{ .Lang }}/apps/focus-capsule/">Focus Capsule</a></li>
@@ -28,3 +31,11 @@
     </ul>
   </div>
 </nav>
+<script>
+  document.querySelector('.nav-hamburger').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+  document.querySelector('.lang-current').addEventListener('click', function() {
+    this.closest('.lang-dropdown').classList.toggle('open');
+  });
+</script>
