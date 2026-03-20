@@ -1,7 +1,7 @@
 ---
 title: "CodeCompose"
 subtitle: "Apps for productivity and focus,<br>powered by AI."
-apps_title: "Our Apps"
+apps_title: "Products"
 apps:
   - name: "FlowState AI"
     icon: "/img/flowstate-icon.png"

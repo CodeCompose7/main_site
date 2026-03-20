@@ -1,7 +1,7 @@
 ---
 title: "코드컴포즈"
 subtitle: "AI로 만드는 집중과 생산성을 위한 앱."
-apps_title: "우리 앱"
+apps_title: "제품"
 apps:
   - name: "FlowState AI"
     icon: "/img/flowstate-icon.png"

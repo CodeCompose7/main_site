@@ -19,7 +19,7 @@ showReadingTime: false
   * 기업, 학교, 스터디 그룹을 위해 딥러닝, 쿠버네티스, 모바일/웹 개발, 소프트웨어 엔지니어링 워크플로에 대한 맞춤 강의를 제공합니다.
   * 자세한 내용은 [CodeCompose 강의](https://courses.codecompose.net/ko/)에서 확인하세요.
 
-## 우리 앱
+## 제품
 
 * **[FlowState AI](/ko/apps/flowstate-ai/)** — AI 기반 실시간 집중도 측정 포커스 타이머 (iOS & Android)
 * **[포커스 캡슐](/ko/apps/focus-capsule/)** — Apple 생태계를 위한 심플 포모도로 타이머 (iOS, iPad, Mac, Apple Watch)

@@ -19,7 +19,7 @@ CodeCompose builds AI-powered productivity apps and offers courses on deep learn
   * We offer customized courses for teams, schools, and study groups on deep learning, Kubernetes, mobile/web development, and software engineering workflows.
   * Visit [CodeCompose Courses](https://courses.codecompose.net/en/) for more details.
 
-## Our Apps
+## Products
 
 * **[FlowState AI](/en/apps/flowstate-ai/)** — AI-powered real-time concentration tracking focus timer (iOS & Android)
 * **[Focus Capsule](/en/apps/focus-capsule/)** — Simple Pomodoro timer for the Apple ecosystem (iOS, iPad, Mac, Apple Watch)
