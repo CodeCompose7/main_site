@@ -195,7 +195,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: center;
 }
 .feature-label {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--color-accent);
   text-transform: uppercase;
@@ -212,8 +212,9 @@ img { max-width: 100%; height: auto; display: block; }
 .feature-text p {
   font-size: 17px;
   color: var(--color-text-secondary);
-  line-height: 1.6;
-  max-width: 480px;
+  line-height: 1.8;
+  max-width: 420px;
+  word-break: keep-all;
 }
 .feature-visual-placeholder {
   width: 100%;
