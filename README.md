@@ -2,12 +2,22 @@
 
 코드컴포즈 앱 포트폴리오 사이트 — 완전 커스텀 Hugo 테마
 
-- **URL**: https://codecompose.net/
+- **URL**: <https://codecompose.net/>
 - **테마**: 커스텀 (Things-inspired, 테마 없음)
 - **호스팅**: GitHub Pages
 - **배포**: GitHub Actions (자동)
 
 ## 로컬 개발
+
+### Docker (권장)
+
+```bash
+docker compose up
+```
+
+`http://localhost:1313` 에서 확인. 파일 수정 시 라이브 리로드 자동 적용.
+
+### Hugo 직접 실행
 
 ```bash
 hugo server -D --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313
@@ -15,7 +25,7 @@ hugo server -D --bind 0.0.0.0 --port 1313 --baseURL http://localhost:1313
 
 ## 프로젝트 구조
 
-```
+```text
 .
 ├── .github/workflows/hugo.yml   # CI/CD
 ├── assets/css/main.css          # 전체 스타일
