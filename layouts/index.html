@@ -6,9 +6,9 @@
   <h1>CodeCompose</h1>
   <p class="subtitle">
     {{ if eq .Lang "ko" }}
-      집중과 생산성을 위한 앱을 만듭니다.
+    집중과 생산성을 위한 앱을 만듭니다.
     {{ else }}
-      Apps for productivity and focus, powered by AI.
+    Apps for productivity and focus, powered by AI.
     {{ end }}
   </p>
   <div class="btn-group">
@@ -18,9 +18,9 @@
 </section>
 
 <!-- Apps -->
-<section class="section-full section-alt">
+<section class="section-full section-alt" style="padding:64px 0;">
   <div class="section">
-    <h2 style="font-size:14px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:32px;">
+    <h2 style="font-size:32px;font-weight:700;letter-spacing:-0.02em;margin-bottom:24px;">
       {{ if eq .Lang "ko" }}우리 앱{{ else }}Our Apps{{ end }}
     </h2>
 
@@ -28,24 +28,29 @@
       <img class="app-card-icon" src="/img/flowstate-icon.png" alt="FlowState AI">
       <div>
         <h3>FlowState AI</h3>
-        <p>{{ if eq .Lang "ko" }}AI 기반 얼굴 인식으로 실시간 집중도를 측정하는 포모도로 타이머.{{ else }}AI-powered focus timer that measures your real concentration level using on-device facial recognition.{{ end }}</p>
+        <p>{{ if eq .Lang "ko" }}AI 기반 얼굴 인식으로 실시간 집중도를 측정하는 포모도로 타이머.{{ else }}AI-powered focus timer that measures
+          your real concentration level using on-device facial recognition.{{ end }}</p>
         <div class="app-card-tags">
           <span class="app-card-tag">iOS</span>
           <span class="app-card-tag">Android</span>
+          <span class="app-card-tag">Flutter</span>
           <span class="app-card-tag">AI</span>
         </div>
       </div>
     </a>
 
     <a class="app-card" href="/{{ .Lang }}/apps/focus-capsule/">
-      <img class="app-card-icon" src="/img/logo.png" alt="Focus Capsule" style="border-radius:18px;border:0.5px solid var(--color-border);">
+      <img class="app-card-icon" src="/img/focus-capsule/focus_capsule-with_bg.png" alt="Focus Capsule"
+        style="border-radius:18px;">
       <div>
         <h3>{{ if eq .Lang "ko" }}포커스 캡슐{{ else }}Focus Capsule{{ end }}</h3>
-        <p>{{ if eq .Lang "ko" }}Apple 생태계를 위한 심플 포모도로 타이머. iPhone, iPad, Mac, Apple Watch 지원.{{ else }}Simple Pomodoro timer for the Apple ecosystem. iPhone, iPad, Mac, and Apple Watch.{{ end }}</p>
+        <p>{{ if eq .Lang "ko" }}Apple 생태계를 위한 심플 포모도로 타이머. iPhone, iPad, Mac, Apple Watch 지원.{{ else }}Simple Pomodoro
+          timer for the Apple ecosystem. iPhone, iPad, Mac, and Apple Watch.{{ end }}</p>
         <div class="app-card-tags">
           <span class="app-card-tag">iOS</span>
           <span class="app-card-tag">macOS</span>
           <span class="app-card-tag">watchOS</span>
+          <span class="app-card-tag">Swift</span>
         </div>
       </div>
     </a>
@@ -55,7 +60,8 @@
 <!-- Courses banner -->
 <section class="cta-section">
   <h2>{{ if eq .Lang "ko" }}교육도 합니다{{ else }}We also teach{{ end }}</h2>
-  <p>{{ if eq .Lang "ko" }}딥러닝, 프로그래밍, 개발 문화에 대한 맞춤 강의를 제공합니다.{{ else }}Custom courses on deep learning, programming, and developer culture.{{ end }}</p>
+  <p>{{ if eq .Lang "ko" }}딥러닝, 프로그래밍, 개발 문화에 대한 맞춤 강의를 제공합니다.{{ else }}Custom courses on deep learning, programming,
+    and developer culture.{{ end }}</p>
   <a class="btn btn-secondary" href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">
     {{ if eq .Lang "ko" }}강의 사이트 방문{{ else }}Visit Courses{{ end }}
   </a>
