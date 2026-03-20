@@ -58,8 +58,7 @@
 <!-- Courses banner -->
 <section class="cta-section">
   <h2>{{ if eq .Lang "ko" }}교육도 합니다{{ else }}We also teach{{ end }}</h2>
-  <p>{{ if eq .Lang "ko" }}딥러닝, 프로그래밍, 개발 문화에 대한 맞춤 강의를 제공합니다.{{ else }}Custom courses on deep learning, programming,
-    and developer culture.{{ end }}</p>
+  <p>{{ if eq .Lang "ko" }}딥러닝, 프로그래밍, 개발 문화에 대한<br>맞춤 강의를 제공합니다.{{ else }}Custom courses on deep learning,<br>programming, and developer culture.{{ end }}</p>
   <a class="btn btn-secondary" href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">
     {{ if eq .Lang "ko" }}강의 사이트 방문{{ else }}Visit Courses{{ end }}
   </a>
