@@ -38,7 +38,8 @@
 
 <!-- Themes showcase -->
 {{ with .Params.themes }}
-<section class="section-full section-alt">
+{{ $featCount := len $.Params.features }}
+<section class="section-full{{ if not (modBool $featCount 2) }} section-alt{{ end }}">
   <div class="section section-center">
     <h2 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px;">
       {{ $.Params.themes_title }}
