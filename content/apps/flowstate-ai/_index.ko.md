@@ -4,7 +4,7 @@ type: "apps"
 layout: "section"
 subtitle: "진짜 집중을, 측정하다."
 icon: "/img/flow_state/icon.png"
-tagline: "무료 사용 가능 · Pro 월 ₩1,900부터"
+tagline: "무료 사용 가능 · Pro 월 ₩2,200부터"
 stores:
   appstore: "#"
   playstore: "#"
