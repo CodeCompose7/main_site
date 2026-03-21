@@ -5,6 +5,7 @@ apps_title: "Products"
 apps:
   - name: "FlowState AI"
     icon: "/img/flow_state/icon_white.png"
+    rounded: true
     url: "/en/apps/flowstate-ai/"
     description: "AI-powered focus timer that measures<br>your real concentration level<br>using on-device facial recognition."
     tags: ["iOS", "Android", "Flutter", "AI"]
