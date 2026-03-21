@@ -1,6 +1,8 @@
 ---
 title: "포커스 캡슐 — 개인정보 처리방침"
 description: "포커스 캡슐 개인정보 처리방침"
+aliases:
+  - /focus-capsule-kr-intro/focus-capsule-privacy-kr/
 showDate: false
 showReadingTime: false
 showTableOfContents: true

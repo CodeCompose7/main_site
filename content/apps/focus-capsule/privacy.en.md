@@ -1,6 +1,8 @@
 ---
 title: "Focus Capsule — Privacy Policy"
 description: "Privacy Policy for Focus Capsule"
+aliases:
+  - /focus-capsule-en-intro/focus-capsule-privacy-policy-en/
 showDate: false
 showReadingTime: false
 showTableOfContents: true
