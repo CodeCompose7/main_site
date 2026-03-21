@@ -4,7 +4,7 @@ subtitle: "AI로 만드는 집중과 생산성을 위한 앱."
 apps_title: "제품"
 apps:
   - name: "FlowState AI"
-    icon: "/img/flowstate-icon.png"
+    icon: "/img/flow_state/icon_white.png"
     url: "/ko/apps/flowstate-ai/"
     description: "AI 기반 얼굴 인식으로 실시간 집중도를 측정하는 포모도로 타이머."
     tags: ["iOS", "Android", "Flutter", "AI"]

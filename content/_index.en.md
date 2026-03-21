@@ -4,7 +4,7 @@ subtitle: "Apps for productivity and focus,<br>powered by AI."
 apps_title: "Products"
 apps:
   - name: "FlowState AI"
-    icon: "/img/flowstate-icon.png"
+    icon: "/img/flow_state/icon_white.png"
     url: "/en/apps/flowstate-ai/"
     description: "AI-powered focus timer that measures<br>your real concentration level<br>using on-device facial recognition."
     tags: ["iOS", "Android", "Flutter", "AI"]
