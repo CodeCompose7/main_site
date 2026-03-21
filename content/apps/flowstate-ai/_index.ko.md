@@ -12,7 +12,7 @@ stores:
 features:
   - label: "핵심 기능"
     title: "AI 기반 집중도 측정"
-    description: "[프리미엄 전용] 집중하고 있는지 추측하지 마세요.<br>FlowState AI는<br>Google ML Kit으로 얼굴을 감지하고,<br>10초 간격으로 집중도를 측정합니다.<br>다른 타이머는 시간만 셀 뿐,<br>FlowState는 진짜 중요한 것을 측정합니다.<br>(향후 다른 여러 모델을 더 지원할 수 있습니다.)"
+    description: "[프리미엄 전용]<br>집중하고 있는지 추측하지 마세요.<br>FlowState AI는<br>Google ML Kit으로 얼굴을 감지하고,<br>10초 간격으로 집중도를 측정합니다.<br>다른 타이머는 시간만 셀 뿐,<br>FlowState는 진짜 중요한 것을 측정합니다.<br>(향후 다른 여러 모델을 더 지원할 수 있습니다.)"
     image: "/img/flow_state/focus-ko.PNG"
   - label: "프라이버시"
     title: "데이터는 기기에만"

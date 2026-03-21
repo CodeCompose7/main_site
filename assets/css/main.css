@@ -1139,7 +1139,8 @@ img {
 
 /* — Responsive — */
 @media (max-width: 1024px) {
-  .pricing-grid {
+  .pricing-grid,
+  .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
