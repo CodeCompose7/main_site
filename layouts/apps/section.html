@@ -28,9 +28,30 @@
       <p>{{ .description | safeHTML }}</p>
     </div>
     <div class="feature-visual">
-      {{ with .image }}
-      <img src="{{ . }}" alt="{{ $.Title }}" class="feature-img">
+      {{ with .images }}
+      <div class="feature-carousel">
+        <div class="feature-carousel-track">
+          {{ range . }}
+          <div class="feature-carousel-slide">
+            <div class="feature-phone">
+              <img class="feature-phone-frame" src="/img/phone_bg.png" alt="">
+              <img class="feature-phone-screen" src="{{ . }}" alt="{{ $.Title }}">
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        <div class="feature-carousel-dots"></div>
+      </div>
+      {{ else }}{{ with .image }}
+      {{ if hasSuffix . ".svg" }}
+      <img src="{{ . }}" alt="{{ $.Title }}" class="feature-icon-img">
+      {{ else }}
+      <div class="feature-phone">
+        <img class="feature-phone-frame" src="/img/phone_bg.png" alt="">
+        <img class="feature-phone-screen" src="{{ . }}" alt="{{ $.Title }}">
+      </div>
       {{ end }}
+      {{ end }}{{ end }}
     </div>
   </div>
 </section>
@@ -125,6 +146,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 {{ end }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.feature-carousel').forEach(function(carousel) {
+    var track = carousel.querySelector('.feature-carousel-track');
+    var slides = carousel.querySelectorAll('.feature-carousel-slide');
+    var dotsContainer = carousel.querySelector('.feature-carousel-dots');
+    var current = 0;
+    var total = slides.length;
+
+    for (var i = 0; i < total; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'feature-carousel-dot' + (i === 0 ? ' active' : '');
+      dot.dataset.index = i;
+      dot.addEventListener('click', function() { goTo(Number(this.dataset.index)); });
+      dotsContainer.appendChild(dot);
+    }
+
+    function goTo(idx) {
+      current = idx;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dotsContainer.querySelectorAll('.feature-carousel-dot').forEach(function(d, j) {
+        d.classList.toggle('active', j === current);
+      });
+    }
+
+    setInterval(function() { goTo((current + 1) % total); }, 4000);
+  });
+});
+</script>
 
 <!-- Feature grid -->
 {{ with .Params.highlights }}

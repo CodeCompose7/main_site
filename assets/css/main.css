@@ -421,6 +421,82 @@ img {
   height: auto;
 }
 
+/* Feature phone frame */
+.feature-phone {
+  position: relative;
+  width: 260px;
+}
+
+.feature-phone-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.feature-phone-screen {
+  width: calc(100% - 20px);
+  height: auto;
+  border-radius: 22px;
+  margin: 10px 10px 0;
+}
+
+/* Feature icon (SVG) */
+.feature-icon-img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  opacity: 0.85;
+}
+
+/* Feature carousel */
+.feature-carousel {
+  width: 280px;
+  overflow: hidden;
+}
+
+.feature-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.feature-carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-carousel-slide .feature-phone {
+  width: 240px;
+}
+
+.feature-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.feature-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-border);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.feature-carousel-dot.active {
+  background: var(--color-text);
+  width: 24px;
+  border-radius: 4px;
+}
+
 .feature-label {
   font-size: 18px;
   font-weight: 600;
@@ -1178,6 +1254,22 @@ img {
 
   .feature-text p {
     max-width: 100%;
+  }
+
+  .feature-phone {
+    width: 220px;
+  }
+
+  .feature-carousel {
+    width: 240px;
+  }
+
+  .feature-carousel-slide .feature-phone {
+    width: 200px;
+  }
+
+  .feature-icon-img {
+    max-width: 140px;
   }
 
   .feature-label {
