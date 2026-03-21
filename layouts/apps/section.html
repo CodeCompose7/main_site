@@ -33,10 +33,14 @@
         <div class="feature-carousel-track">
           {{ range . }}
           <div class="feature-carousel-slide">
+            {{ if $feat.phone_frame }}
             <div class="feature-phone">
               <img class="feature-phone-frame" src="/img/phone_bg.png" alt="">
               <img class="feature-phone-screen" src="{{ . }}" alt="{{ $.Title }}">
             </div>
+            {{ else }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="feature-img">
+            {{ end }}
           </div>
           {{ end }}
         </div>
@@ -45,11 +49,13 @@
       {{ else }}{{ with .image }}
       {{ if hasSuffix . ".svg" }}
       <img src="{{ . }}" alt="{{ $.Title }}" class="feature-icon-img">
-      {{ else }}
+      {{ else if $feat.phone_frame }}
       <div class="feature-phone">
         <img class="feature-phone-frame" src="/img/phone_bg.png" alt="">
         <img class="feature-phone-screen" src="{{ . }}" alt="{{ $.Title }}">
       </div>
+      {{ else }}
+      <img src="{{ . }}" alt="{{ $.Title }}" class="feature-img">
       {{ end }}
       {{ end }}{{ end }}
     </div>

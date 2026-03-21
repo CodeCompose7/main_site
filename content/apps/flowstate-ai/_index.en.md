@@ -14,6 +14,7 @@ features:
     title: "AI-powered focus detection"
     description: "[Premium]<br>Stop guessing if you're focused.<br>FlowState AI uses Google ML Kit<br>to detect your face and measure<br>real concentration every 10 seconds.<br>Other timers just count down.<br>FlowState measures what actually matters.<br>(More models may be supported in the future.)"
     image: "/img/flow_state/focus-en.PNG"
+    phone_frame: true
   - label: "Privacy"
     title: "Your data stays on device"
     description: "All video analysis happens locally.<br>No images or video are ever<br>uploaded, stored, or transmitted.<br>Privacy isn't an afterthought —<br>it's the architecture."
@@ -26,9 +27,11 @@ features:
     title: "Beyond Pomodoro"
     description: "Pomodoro timer, countdown,<br>counter, and to-do list.<br>Focus, time management,<br>repetition tracking, and task management<br>all in one app."
     image: "/img/flow_state/tools-en.PNG"
+    phone_frame: true
   - label: "Insights"
     title: "Detailed focus reports"
     description: "Track concentration trends<br>over days, weeks, and months.<br>See when you focus best<br>and which sessions were<br>most productive."
+    phone_frame: true
     images:
       - "/img/flow_state/stat_1-en.PNG"
       - "/img/flow_state/stat_2-en.PNG"
