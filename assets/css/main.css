@@ -425,6 +425,7 @@ img {
 .feature-phone {
   position: relative;
   width: 260px;
+  overflow: hidden;
 }
 
 .feature-phone-frame {
@@ -440,8 +441,8 @@ img {
 .feature-phone-screen {
   width: calc(100% - 20px);
   height: auto;
-  border-radius: 22px;
-  margin: 10px 10px 0;
+  border-radius: 37px;
+  margin: 10px 10px 2px 10px;
 }
 
 /* Feature icon (SVG) */
