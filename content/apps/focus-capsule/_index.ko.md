@@ -4,7 +4,7 @@ type: "apps"
 layout: "section"
 subtitle: "집중할 때 집중하고, 쉴 때 쉬세요."
 icon: "/img/focus-capsule/focus_capsule-logo.png"
-tagline: "50회 포모도로 무료 · 연간 구독 및 일회성 구매"
+tagline: "50회 포모도로 무료<br>연간 구독 및 일회성 구매"
 hero_bg: "focus-capsule"
 stores:
   appstore: "https://apps.apple.com/app/focus-capsule-pomodoro/id1663703904"

@@ -441,8 +441,8 @@ img {
 .feature-phone-screen {
   width: calc(100% - 20px);
   height: auto;
-  border-radius: 37px;
-  margin: 10px 10px 2px 10px;
+  border-radius: 30px;
+  margin: 8px 10px 2px;
 }
 
 /* Feature icon (SVG) */
@@ -838,6 +838,15 @@ img {
   word-break: keep-all;
 }
 
+/* — Legal links — */
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
 /* — Footer — */
 .site-footer {
   border-top: 0.5px solid var(--color-border);
@@ -1139,6 +1148,7 @@ img {
 
 /* — Responsive — */
 @media (max-width: 1024px) {
+
   .pricing-grid,
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1272,7 +1282,15 @@ img {
   }
 
   .feature-icon-img {
-    max-width: 140px;
+    max-width: 120px;
+    padding: 20px 0;
+    width: 120px;
+  }
+
+
+  .legal-links {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .feature-label {

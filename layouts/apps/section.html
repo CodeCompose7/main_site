@@ -14,7 +14,7 @@
   </div>
   {{ end }}
   {{ with .Params.tagline }}
-  <p class="tagline">{{ . }}</p>
+  <p class="tagline">{{ . | safeHTML }}</p>
   {{ end }}
 </section>
 
@@ -250,9 +250,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <!-- Legal links -->
-<section class="section" style="padding:48px 24px;text-align:center;">
-  {{ with .Params.legal_privacy }}<a href="privacy/" style="margin-right:24px;">{{ . }}</a>{{ end }}
-  {{ with .Params.legal_terms }}<a href="terms/" style="margin-right:24px;">{{ . }}</a>{{ end }}
+<section class="legal-links">
+  {{ with .Params.legal_privacy }}<a href="privacy/">{{ . }}</a>{{ end }}
+  {{ with .Params.legal_terms }}<a href="terms/">{{ . }}</a>{{ end }}
   <a href="mailto:{{ .Site.Params.email }}">{{ .Params.legal_support }}</a>
 </section>
 
