@@ -94,6 +94,7 @@ FlowState AI는 만 14세 미만 아동을 대상으로 하지 않습니다. 만
 
 - 앱 설정에서 언제든지 계정과 관련 데이터를 삭제할 수 있습니다.
 - 계정 삭제 시 Firebase Firestore의 모든 데이터는 30일 이내에 영구 삭제됩니다.
+- 앱 외부에서 데이터 삭제를 요청하려면 [dev@codecompose.net](mailto:dev@codecompose.net)으로 연락해 주세요.
 - 로컬 데이터는 앱 삭제 시 함께 제거됩니다.
 
 ---
