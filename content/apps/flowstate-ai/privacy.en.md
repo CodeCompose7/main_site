@@ -92,6 +92,7 @@ FlowState AI is not intended for children under 13. We do not knowingly collect 
 
 - You can delete your account and all associated data at any time from the app's Settings.
 - Upon account deletion, all your data in Firebase Firestore will be permanently removed within 30 days.
+- To request data deletion outside the app, please contact us at [dev@codecompose.net](mailto:dev@codecompose.net).
 - Local data is removed when you uninstall the app.
 
 ---
