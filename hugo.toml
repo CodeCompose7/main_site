@@ -1,14 +1,15 @@
 baseURL = "https://codecompose.net/"
 languageCode = "en"
-defaultContentLanguage = "en"
+defaultContentLanguage = "ko"
 defaultContentLanguageInSubdir = true
 title = "CodeCompose"
 enableRobotsTXT = true
+relativeURLs = true
 
 [languages]
   [languages.en]
     languageName = "English"
-    weight = 1
+    weight = 2
     title = "CodeCompose"
     [languages.en.params]
       description = "Apps for productivity and focus, powered by AI."
@@ -26,7 +27,7 @@ enableRobotsTXT = true
 
   [languages.ko]
     languageName = "한국어"
-    weight = 2
+    weight = 1
     title = "코드컴포즈"
     [languages.ko.params]
       description = "AI 기반 생산성 앱을 만듭니다."
