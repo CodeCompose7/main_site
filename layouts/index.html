@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero">
+  <img class="hero-icon" src="/img/logo.png" alt="{{ .Title }}">
+  <h1>{{ .Title }}</h1>
+  <p class="subtitle">{{ .Params.subtitle | safeHTML }}</p>
+</section>
+
+<!-- Apps -->
+{{ with .Params.apps }}
+<section class="section-full section-alt" style="padding:64px 0;">
+  <div class="section">
+    <h2 style="font-size:32px;font-weight:700;letter-spacing:-0.02em;margin-bottom:24px;">
+      {{ $.Params.apps_title }}
+    </h2>
+
+    {{ range . }}
+    <a class="app-card" href="{{ .url }}">
+      <img class="app-card-icon{{ if .rounded }} app-card-icon-rounded{{ end }}" src="{{ .icon }}" alt="{{ .name }}">
+      <div>
+        <h3>{{ .name }}</h3>
+        <p>{{ .description | safeHTML }}</p>
+        <div class="app-card-tags">
+          {{ range .tags }}
+          <span class="app-card-tag">{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- Courses banner -->
+<section class="cta-section">
+  <h2>{{ .Params.cta_title }}</h2>
+  <p>{{ .Params.cta_description | safeHTML }}</p>
+  <a class="btn btn-secondary" href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">
+    {{ .Params.cta_button }}
+  </a>
+</section>
+
+{{ end }}

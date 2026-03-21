@@ -1,0 +1,259 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero{{ with .Params.hero_bg }} hero-bg-{{ . }}{{ end }}">
+  {{ with .Params.icon }}
+  <img class="hero-icon" src="{{ . }}" alt="{{ $.Title }}">
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <p class="subtitle">{{ .Params.subtitle }}</p>
+  {{ with .Params.stores }}
+  <div class="btn-group">
+    {{ with .appstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">App Store</a>{{ end }}
+    {{ with .playstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">Google Play</a>{{ end }}
+  </div>
+  {{ end }}
+  {{ with .Params.tagline }}
+  <p class="tagline">{{ . }}</p>
+  {{ end }}
+</section>
+
+<!-- Features — alternating full-bleed -->
+{{ range $i, $feat := .Params.features }}
+<section class="section-full{{ if (modBool $i 2) }} section-alt{{ end }}">
+  <div class="feature-row{{ if not (modBool $i 2) }} reverse{{ end }}">
+    <div class="feature-text">
+      {{ with .label }}<div class="feature-label">{{ . }}</div>{{ end }}
+      <h2>{{ .title }}</h2>
+      <p>{{ .description | safeHTML }}</p>
+    </div>
+    <div class="feature-visual">
+      {{ with .images }}
+      <div class="feature-carousel">
+        <div class="feature-carousel-track">
+          {{ range . }}
+          <div class="feature-carousel-slide">
+            {{ if $feat.phone_frame }}
+            <div class="feature-phone">
+              <img class="feature-phone-frame" src="/img/phone_bg.png" alt="">
+              <img class="feature-phone-screen" src="{{ . }}" alt="{{ $.Title }}">
+            </div>
+            {{ else }}
+            <img src="{{ . }}" alt="{{ $.Title }}" class="feature-img">
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+        <div class="feature-carousel-dots"></div>
+      </div>
+      {{ else }}{{ with .image }}
+      {{ if hasSuffix . ".svg" }}
+      <img src="{{ . }}" alt="{{ $.Title }}" class="feature-icon-img">
+      {{ else if $feat.phone_frame }}
+      <div class="feature-phone">
+        <img class="feature-phone-frame" src="/img/phone_bg.png" alt="">
+        <img class="feature-phone-screen" src="{{ . }}" alt="{{ $.Title }}">
+      </div>
+      {{ else }}
+      <img src="{{ . }}" alt="{{ $.Title }}" class="feature-img">
+      {{ end }}
+      {{ end }}{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Themes showcase -->
+{{ with .Params.themes }}
+{{ $featCount := len $.Params.features }}
+<section class="section-full{{ if modBool $featCount 2 }} section-alt{{ end }}">
+  <div class="section section-center">
+    <h2 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px;">
+      {{ $.Params.themes_title }}
+    </h2>
+    <p style="font-size:17px;color:var(--color-text-secondary);margin-bottom:48px;">
+      {{ $.Params.themes_subtitle }}
+    </p>
+    <div class="themes-tabs">
+      {{ range $i, $theme := . }}
+      <button class="theme-tab{{ if eq $i 0 }} active{{ end }}" data-theme="{{ $i }}">
+        <i class="ti {{ .icon }}"></i>
+      </button>
+      {{ end }}
+    </div>
+    <div class="themes-showcase">
+      <div class="themes-left">
+        <div class="themes-preview">
+          <img class="themes-phone-frame" src="/img/phone_bg.png" alt="">
+          {{ range $i, $theme := . }}
+          <div class="theme-preview-item{{ if eq $i 0 }} active{{ end }}" data-theme="{{ $i }}">
+            <video autoplay muted playsinline poster="{{ .poster }}">
+              <source src="{{ .video }}" type="video/mp4">
+            </video>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      <div class="themes-right">
+        {{ range $i, $theme := . }}
+        <div class="theme-detail-item{{ if eq $i 0 }} active{{ end }}" data-theme="{{ $i }}">
+          <h3 class="theme-detail-name">{{ .name }}</h3>
+          <p class="theme-detail-tagline">{{ .tab_desc }}</p>
+          <p class="theme-detail-desc">{{ .description | safeHTML }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ with $.Params.themes_landscape_image }}
+    <div class="themes-landscape">
+      <h3 class="themes-landscape-title">{{ $.Params.themes_landscape_title }}</h3>
+      <p class="themes-landscape-desc">{{ $.Params.themes_landscape_desc }}</p>
+      <div class="themes-landscape-phone">
+        <img class="themes-landscape-frame" src="/img/phone_bg.png" alt="">
+        <img class="themes-landscape-screen" src="{{ . }}" alt="{{ $.Params.themes_landscape_title }}">
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var totalThemes = document.querySelectorAll('.theme-tab').length;
+
+  function switchTheme(idx) {
+    var s = String(idx);
+    document.querySelectorAll('.theme-tab, .theme-preview-item, .theme-detail-item').forEach(function(el) {
+      el.classList.toggle('active', el.dataset.theme === s);
+    });
+    document.querySelectorAll('.theme-preview-item video').forEach(function(v) {
+      if (v.closest('.theme-preview-item').dataset.theme === s) {
+        v.currentTime = 0;
+        v.play();
+      } else {
+        v.pause();
+      }
+    });
+  }
+
+  document.querySelectorAll('.theme-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      switchTheme(Number(this.dataset.theme));
+    });
+  });
+
+  document.querySelectorAll('.theme-preview-item video').forEach(function(v) {
+    v.addEventListener('ended', function() {
+      var current = Number(v.closest('.theme-preview-item').dataset.theme);
+      setTimeout(function() {
+        switchTheme((current + 1) % totalThemes);
+      }, 2000);
+    });
+  });
+});
+</script>
+{{ end }}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.feature-carousel').forEach(function(carousel) {
+    var track = carousel.querySelector('.feature-carousel-track');
+    var slides = carousel.querySelectorAll('.feature-carousel-slide');
+    var dotsContainer = carousel.querySelector('.feature-carousel-dots');
+    var current = 0;
+    var total = slides.length;
+
+    for (var i = 0; i < total; i++) {
+      var dot = document.createElement('button');
+      dot.className = 'feature-carousel-dot' + (i === 0 ? ' active' : '');
+      dot.dataset.index = i;
+      dot.addEventListener('click', function() { goTo(Number(this.dataset.index)); });
+      dotsContainer.appendChild(dot);
+    }
+
+    function goTo(idx) {
+      current = idx;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dotsContainer.querySelectorAll('.feature-carousel-dot').forEach(function(d, j) {
+        d.classList.toggle('active', j === current);
+      });
+    }
+
+    setInterval(function() { goTo((current + 1) % total); }, 4000);
+  });
+});
+</script>
+
+<!-- Feature grid -->
+{{ with .Params.highlights }}
+<section class="section-full section-alt">
+  <div class="section section-center">
+    <h2 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;margin-bottom:48px;">
+      {{ $.Params.highlights_title }}
+    </h2>
+    <div class="features-grid">
+      {{ range . }}
+      <div class="feature-card">
+        <div class="feature-card-icon"><img src="{{ .icon }}" alt="{{ .title }}"></div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description | safeHTML }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Pricing -->
+{{ with .Params.pricing }}
+<section class="section-full">
+  <div class="section section-center">
+    <h2 style="font-size:40px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px;">
+      {{ $.Params.pricing_title }}
+    </h2>
+    <p style="font-size:17px;color:var(--color-text-secondary);">
+      {{ $.Params.pricing_subtitle }}
+    </p>
+    {{ with $.Params.pricing_notes }}
+    <p style="font-size:14px;color:var(--color-text-tertiary);margin-top:8px;">
+      {{ range $i, $note := . }}{{ if $i }}<br>{{ end }}{{ $note }}{{ end }}
+    </p>
+    {{ end }}
+    <div class="pricing-grid">
+      {{ range . }}
+      <div class="pricing-card{{ if .featured }} featured{{ end }}">
+        {{ if .featured }}<div class="pricing-badge">{{ $.Params.pricing_badge }}</div>{{ end }}
+        <h3>{{ .name }}</h3>
+        <div class="pricing-price">{{ .price }} {{ with .period }}<span>{{ . }}</span>{{ end }}</div>
+        {{ with .sub }}<div class="pricing-sub">{{ . }}</div>{{ end }}
+        <ul class="pricing-features">
+          {{ range .items }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- CTA -->
+<section class="cta-section section-alt">
+  <h2>{{ .Params.cta_title }}</h2>
+  <p>{{ .Params.cta_description }}</p>
+  {{ with .Params.stores }}
+  <div class="btn-group">
+    {{ with .appstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">App Store</a>{{ end }}
+    {{ with .playstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">Google Play</a>{{ end }}
+  </div>
+  {{ end }}
+</section>
+
+<!-- Legal links -->
+<section class="section" style="padding:48px 24px;text-align:center;">
+  {{ with .Params.legal_privacy }}<a href="privacy/" style="margin-right:24px;">{{ . }}</a>{{ end }}
+  {{ with .Params.legal_terms }}<a href="terms/" style="margin-right:24px;">{{ . }}</a>{{ end }}
+  <a href="mailto:{{ .Site.Params.email }}">{{ .Params.legal_support }}</a>
+</section>
+
+{{ end }}

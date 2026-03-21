@@ -1,0 +1,62 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="services-hero-icon-single"><i class="ti ti-code"></i></div>
+  <h1>{{ .Params.subtitle }}</h1>
+  <p class="subtitle">{{ .Params.description | safeHTML }}</p>
+</section>
+
+<!-- Services grid -->
+{{ with .Params.services }}
+<section class="section-full section-alt">
+  <div class="section section-center">
+    <h2 style="font-size:36px;font-weight:700;letter-spacing:-0.02em;margin-bottom:40px;">
+      {{ $.Params.services_title }}
+    </h2>
+    <div class="services-grid">
+      {{ range . }}
+      <div class="service-card">
+        <div class="service-icon"><img src="{{ .icon }}" alt="{{ .title }}"></div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description | safeHTML }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Process -->
+{{ with .Params.process }}
+<section class="section-full">
+  <div class="section section-center">
+    <h2 style="font-size:36px;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px;">
+      {{ $.Params.process_title }}
+    </h2>
+    <p style="font-size:17px;color:var(--color-text-secondary);margin-bottom:48px;word-break:keep-all;">
+      {{ $.Params.process_description | safeHTML }}
+    </p>
+    <div class="process-steps">
+      {{ range . }}
+      <div class="process-step">
+        <div class="process-step-number">{{ .step }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description | safeHTML }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- CTA -->
+<section class="cta-section section-alt">
+  <h2>{{ .Params.cta_title }}</h2>
+  <p>{{ .Params.cta_description | safeHTML }}</p>
+  <a class="btn btn-primary" href="mailto:{{ .Site.Params.email }}">
+    {{ .Params.cta_button }}
+  </a>
+</section>
+
+{{ end }}

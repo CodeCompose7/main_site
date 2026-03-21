@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>{{ .Site.Params.footer_apps }}</h4>
+      <a href="/{{ .Lang }}/apps/flowstate-ai/">FlowState AI</a>
+      <a href="/{{ .Lang }}/apps/focus-capsule/">Focus Capsule</a>
+    </div>
+    <div class="footer-col">
+      <h4>{{ .Site.Params.footer_resources }}</h4>
+      <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ .Site.Params.footer_courses }}</a>
+      <a href="/{{ .Lang }}/services/">{{ .Site.Params.footer_services }}</a>
+      <a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/blog/" target="_blank">{{ .Site.Params.footer_blog }}</a>
+    </div>
+    <div class="footer-col">
+      <h4>{{ .Site.Params.footer_contact }}</h4>
+      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+      <a href="{{ .Site.Params.github }}" target="_blank">GitHub</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-business">
+      {{ .Site.Params.footer_business | safeHTML }}
+    </div>
+  </div>
+  <div class="footer-logo">
+    <a href="/{{ .Lang }}/">
+      <img src="/img/logo.png" alt="{{ .Site.Title }}">
+      <span>{{ .Site.Params.footer_company }}</span>
+    </a>
+  </div>
+</footer>

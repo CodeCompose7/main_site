@@ -1,0 +1,42 @@
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/{{ .Lang }}/">
+      <img src="/img/logo.png" alt="{{ .Site.Title }}">
+      <span>{{ .Site.Title }}</span>
+    </a>
+    <button class="nav-hamburger" aria-label="Menu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/{{ .Lang }}/apps/flowstate-ai/">FlowState AI</a></li>
+      <li><a href="/{{ .Lang }}/apps/focus-capsule/">Focus Capsule</a></li>
+      <li><a href="{{ .Site.Params.coursesUrl }}/{{ .Lang }}/" target="_blank">{{ .Site.Params.nav_courses }}</a></li>
+      <li><a href="/{{ .Lang }}/services/">{{ .Site.Params.nav_services }}</a></li>
+      <li><a href="/{{ .Lang }}/about/">{{ .Site.Params.nav_about }}</a></li>
+      <li class="lang-dropdown">
+        <button class="lang-current">
+          <i class="ti ti-language"></i>
+          {{ .Site.Language.LanguageName }}
+          <i class="ti ti-chevron-down lang-arrow"></i>
+        </button>
+        <ul class="lang-menu">
+          {{ range .AllTranslations }}
+          <li>
+            <a href="{{ .RelPermalink }}" {{ if eq .Lang $.Lang }} class="active" {{ end }}>
+              {{ .Language.LanguageName }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<script>
+  document.querySelector('.nav-hamburger').addEventListener('click', function () {
+    document.querySelector('.nav-links').classList.toggle('open');
+  });
+  document.querySelector('.lang-current').addEventListener('click', function () {
+    this.closest('.lang-dropdown').classList.toggle('open');
+  });
+</script>
