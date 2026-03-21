@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
       {{ range $i, $note := . }}{{ if $i }}<br>{{ end }}{{ $note }}{{ end }}
     </p>
     {{ end }}
-    <div class="pricing-grid">
+    <div class="pricing-grid pricing-grid-{{ len . }}">
       {{ range . }}
       <div class="pricing-card{{ if .featured }} featured{{ end }}">
         {{ if .featured }}<div class="pricing-badge">{{ $.Params.pricing_badge }}</div>{{ end }}

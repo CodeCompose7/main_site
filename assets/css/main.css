@@ -123,6 +123,12 @@ img {
   .site-nav {
     background: rgba(0, 0, 0, 0.8);
   }
+
+  .feature-card-icon img,
+  .service-icon img,
+  .feature-icon-img {
+    filter: invert(1);
+  }
 }
 
 .nav-inner {
@@ -752,6 +758,11 @@ img {
   margin: 40px auto 0;
 }
 
+.pricing-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 810px;
+}
+
 .pricing-card {
   padding: 30px 20px;
   border-radius: 20px;
@@ -1152,6 +1163,10 @@ img {
   .pricing-grid,
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
