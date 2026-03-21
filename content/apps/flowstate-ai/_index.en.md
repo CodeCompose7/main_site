@@ -4,7 +4,7 @@ type: "apps"
 layout: "section"
 subtitle: "Your focus, measured. Not guessed."
 icon: "/img/flow_state/icon.png"
-tagline: "Limited free use · Monthly, yearly subscription & one-time purchase"
+tagline: "Limited free use<br>Monthly, yearly subscription & one-time purchase"
 hero_bg: "flowstate"
 stores:
   appstore: "#"

@@ -4,7 +4,7 @@ type: "apps"
 layout: "section"
 subtitle: "진짜 집중을, 측정하다."
 icon: "/img/flow_state/icon.png"
-tagline: "제한된 무료 사용 · 월간, 연간 구독 및 일회성 구매"
+tagline: "제한된 무료 사용<br>월간, 연간 구독 및 일회성 구매"
 hero_bg: "flowstate"
 stores:
   appstore: "#"
