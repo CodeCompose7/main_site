@@ -6,8 +6,8 @@ showReadingTime: false
 showTableOfContents: true
 ---
 
-**Effective date**: March 2026  
-**Last updated**: March 2026
+**Effective date**: March 2026
+**Last updated**: March 22, 2026
 
 Please read these Terms of Service ("Terms") carefully before using the FlowState AI mobile application ("App") operated by CodeCompose ("we", "us", or "our").
 
@@ -36,6 +36,7 @@ FlowState AI is a productivity application that provides:
 - To use cross-device sync and cloud backup, you must create an account.
 - You are responsible for maintaining the security of your account credentials.
 - You must provide accurate information when creating an account.
+- You may delete your account at any time from the app's Settings. Upon account deletion, all associated data will be permanently removed in accordance with our Privacy Policy.
 
 ---
 
@@ -89,19 +90,27 @@ To the maximum extent permitted by law, CodeCompose shall not be liable for any 
 
 ---
 
-## 9. Changes to terms
+## 9. Service termination
+
+- We may discontinue or modify FlowState AI at any time. If we plan to permanently discontinue the service, we will provide at least 30 days' prior notice via the app or email.
+- During the notice period, you will be able to export or delete your data.
+- Upon service termination, all user data will be handled in accordance with our Privacy Policy.
+
+---
+
+## 10. Changes to terms
 
 We reserve the right to modify these Terms at any time. Continued use of the App after changes constitutes acceptance of the revised Terms.
 
 ---
 
-## 10. Governing law
+## 11. Governing law
 
 These Terms shall be governed by and construed in accordance with the laws of the Republic of Korea.
 
 ---
 
-## 11. Contact us
+## 12. Contact us
 
 For questions about these Terms:
 
