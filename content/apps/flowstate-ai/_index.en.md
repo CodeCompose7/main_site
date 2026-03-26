@@ -93,7 +93,7 @@ pricing:
       - "Stats start at midnight"
       - "Default theme only"
   - name: "Monthly"
-    price: "$1.49"
+    price: "$0.99"
     sub: "/month"
     items:
       - "Unlimited events"
@@ -104,7 +104,7 @@ pricing:
       - "All themes"
       - "AI focus tracking"
   - name: "Yearly"
-    price: "$11.99"
+    price: "$7.99"
     sub: "/year"
     featured: true
     items:
@@ -117,7 +117,7 @@ pricing:
       - "AI focus tracking"
       - "Save 32% vs monthly"
   - name: "Lifetime"
-    price: "$29.99"
+    price: "$19.99"
     sub: "one-time"
     items:
       - "Unlimited events"
