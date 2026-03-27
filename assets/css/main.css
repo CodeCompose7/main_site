@@ -397,6 +397,24 @@ img {
   flex-wrap: wrap;
 }
 
+.store-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.store-label {
+  font-size: 0.75rem;
+  color: var(--color-muted, #888);
+}
+
+.btn.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
 /* — Feature sections — */
 .feature-row {
   display: flex;
