@@ -7,8 +7,12 @@ icon: "/img/flow_state/icon.png"
 tagline: "Limited free use<br>Monthly, yearly subscription & one-time purchase"
 hero_bg: "flowstate"
 stores:
+  # appstore: "https://apps.apple.com/us/app/id6760279918"
   appstore: "#"
+  appstore_label: "Coming April"
+  # playstore: "https://play.google.com/store/apps/details?id=net.codecompose.flow_state_ai"
   playstore: "#"
+  playstore_label: "Coming May"
 features:
   - label: "Core Feature"
     title: "AI-powered focus detection"

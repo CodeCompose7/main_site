@@ -9,8 +9,18 @@
   <p class="subtitle">{{ .Params.subtitle }}</p>
   {{ with .Params.stores }}
   <div class="btn-group">
-    {{ with .appstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">App Store</a>{{ end }}
-    {{ with .playstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">Google Play</a>{{ end }}
+    {{ with .appstore }}
+    <div class="store-btn-wrap">
+      <a class="btn btn-primary{{ if eq . "#" }} disabled{{ end }}" href="{{ . }}"{{ if ne . "#" }} target="_blank"{{ end }}>App Store</a>
+      {{ with $.Params.stores.appstore_label }}<span class="store-label">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    {{ with .playstore }}
+    <div class="store-btn-wrap">
+      <a class="btn btn-primary{{ if eq . "#" }} disabled{{ end }}" href="{{ . }}"{{ if ne . "#" }} target="_blank"{{ end }}>Google Play</a>
+      {{ with $.Params.stores.playstore_label }}<span class="store-label">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
   </div>
   {{ end }}
   {{ with .Params.tagline }}
@@ -243,8 +253,18 @@ document.addEventListener('DOMContentLoaded', function() {
   <p>{{ .Params.cta_description }}</p>
   {{ with .Params.stores }}
   <div class="btn-group">
-    {{ with .appstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">App Store</a>{{ end }}
-    {{ with .playstore }}<a class="btn btn-primary" href="{{ . }}" target="_blank">Google Play</a>{{ end }}
+    {{ with .appstore }}
+    <div class="store-btn-wrap">
+      <a class="btn btn-primary{{ if eq . "#" }} disabled{{ end }}" href="{{ . }}"{{ if ne . "#" }} target="_blank"{{ end }}>App Store</a>
+      {{ with $.Params.stores.appstore_label }}<span class="store-label">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+    {{ with .playstore }}
+    <div class="store-btn-wrap">
+      <a class="btn btn-primary{{ if eq . "#" }} disabled{{ end }}" href="{{ . }}"{{ if ne . "#" }} target="_blank"{{ end }}>Google Play</a>
+      {{ with $.Params.stores.playstore_label }}<span class="store-label">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
   </div>
   {{ end }}
 </section>
