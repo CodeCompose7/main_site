@@ -54,6 +54,12 @@ highlights:
 themes_title: "나만의 타이머 화면"
 themes_subtitle: "집중하는 동안 보게 될 화면, 직접 고르세요."
 themes:
+  - name: "Cherry Blossom"
+    description: "프리미엄 전용 테마입니다.<br>벚꽃이 흩날리는 분위기 속에서 집중하세요.<br><br>Pomodoro로 사용하면,<br>작업 시에는 음료수가 줄어들고,<br>휴식 시에는 음료수가 차오릅니다.<br><br>🌸 4월 18일까지 모든 사용자에게 무료 개방!"
+    tab_desc: "[프리미엄 전용, 4/18까지 무료] 벚꽃이 흩날리는 타이머"
+    video: "/video/flow_state/theme_cherry.mp4"
+    poster: "/img/flow_state/theme_cherry_poster.jpeg"
+    icon: "ti-flower"
   - name: "Full Bar"
     description: "화면 전체가 프로그레스 바가 됩니다.<br>남은 시간이 한눈에 들어오는 기본 테마입니다.<br><br>Pomodoro로 사용하면,<br>작업 시에는 바가 줄어들고,<br>휴식 시에는 바가 차오릅니다."
     tab_desc: "화면 전체가 프로그레스 바"
