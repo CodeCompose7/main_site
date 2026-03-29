@@ -54,6 +54,12 @@ highlights:
 themes_title: "Your timer screen"
 themes_subtitle: "Choose the screen you'll see while focusing."
 themes:
+  - name: "Cherry Blossom"
+    description: "A premium-only theme.<br>Focus while cherry blossoms drift around you.<br><br>In Pomodoro mode,<br>the drink decreases during work<br>and fills up during breaks.<br><br>🌸 Free for all users until April 18!"
+    tab_desc: "[Premium, Free until 4/18] Cherry blossom timer"
+    video: "/video/flow_state/theme_cherry.mp4"
+    poster: "/img/flow_state/theme_cherry_poster.jpeg"
+    icon: "ti-flower"
   - name: "Full Bar"
     description: "The entire screen becomes a progress bar.<br>A default theme that shows remaining time at a glance.<br><br>In Pomodoro mode,<br>the bar shrinks during work<br>and fills up during breaks."
     tab_desc: "Full-screen progress bar"
