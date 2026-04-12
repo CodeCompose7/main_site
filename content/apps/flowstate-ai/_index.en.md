@@ -6,6 +6,10 @@ subtitle: "Your focus, measured. Not guessed."
 icon: "/img/flow_state/icon.png"
 tagline: "Limited free use<br>Monthly, yearly subscription & one-time purchase"
 hero_bg: "flowstate"
+product_hunt:
+  url: "https://www.producthunt.com/products/flowstate-ai-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-flowstate-ai-2"
+  image: "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1121810&theme=light&t=1775992695491"
+  alt: "FlowState AI - Pomodoro timer with on-device AI to measure your real focus | Product Hunt"
 stores:
   appstore: "https://apps.apple.com/us/app/id6760279918"
   # playstore: "https://play.google.com/store/apps/details?id=net.codecompose.flow_state_ai"
