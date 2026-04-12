@@ -26,6 +26,13 @@
   {{ with .Params.tagline }}
   <p class="tagline">{{ . | safeHTML }}</p>
   {{ end }}
+  {{ with .Params.product_hunt }}
+  <div class="product-hunt-badge">
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ .image }}" alt="{{ .alt }}" width="250" height="54">
+    </a>
+  </div>
+  {{ end }}
 </section>
 
 <!-- Features — alternating full-bleed -->

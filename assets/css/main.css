@@ -352,6 +352,15 @@ img {
   margin-top: 16px;
 }
 
+.hero .product-hunt-badge {
+  margin-top: 20px;
+}
+
+.hero .product-hunt-badge img {
+  width: 250px;
+  height: 54px;
+}
+
 /* — Buttons — */
 .btn {
   display: inline-flex;
